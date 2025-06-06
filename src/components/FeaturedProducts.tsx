@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { fetchAllProducts } from '@/lib/shopify';
 
 interface Product {
   id: string;
@@ -22,116 +23,54 @@ interface Product {
       currencyCode: string;
     };
   }>;
+  productType?: string;
+  tags?: string[];
 }
-
-// Dummy product data for development
-const dummyProducts: Product[] = [
-  {
-    id: '1',
-    title: 'Heritage Rosa Damascena',
-    handle: 'heritage-rosa-damascena',
-    description: 'A classic Damask rose with an intoxicating fragrance, cultivated since ancient times. Known for its deep pink petals and therapeutic properties.',
-    images: [
-      {
-        id: '1',
-        src: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        altText: 'Heritage Rosa Damascena pink roses'
-      }
-    ],
-    variants: [
-      {
-        id: '1',
-        price: {
-          amount: '45.00',
-          currencyCode: 'EUR'
-        }
-      }
-    ]
-  },
-  {
-    id: '2',
-    title: 'Gallica Officinalis',
-    handle: 'gallica-officinalis',
-    description: 'The apothecary rose, steeped in history and known for its medicinal properties. Deep crimson blooms with a rich, complex fragrance.',
-    images: [
-      {
-        id: '2',
-        src: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        altText: 'Gallica Officinalis red roses'
-      }
-    ],
-    variants: [
-      {
-        id: '2',
-        price: {
-          amount: '52.00',
-          currencyCode: 'EUR'
-        }
-      }
-    ]
-  },
-  {
-    id: '3',
-    title: 'Alba Maxima',
-    handle: 'alba-maxima',
-    description: 'The great white rose, symbol of purity and elegance. Large, fragrant white blooms that have graced European gardens for centuries.',
-    images: [
-      {
-        id: '3',
-        src: 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        altText: 'Alba Maxima white roses'
-      }
-    ],
-    variants: [
-      {
-        id: '3',
-        price: {
-          amount: '48.00',
-          currencyCode: 'EUR'
-        }
-      }
-    ]
-  },
-  {
-    id: '4',
-    title: 'Centifolia Muscosa',
-    handle: 'centifolia-muscosa',
-    description: 'The moss rose with its distinctive mossy sepals and cabbage-like form. A romantic choice with deep pink, heavily scented blooms.',
-    images: [
-      {
-        id: '4',
-        src: 'https://images.unsplash.com/photo-1455659817273-f2fd515cbdfb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        altText: 'Centifolia Muscosa moss roses'
-      }
-    ],
-    variants: [
-      {
-        id: '4',
-        price: {
-          amount: '55.00',
-          currencyCode: 'EUR'
-        }
-      }
-    ]
-  }
-];
 
 export default function FeaturedProducts() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log('🔄 FeaturedProducts useEffect running');
     const loadProducts = async () => {
-      // Simulate loading time
-      await new Promise(resolve => setTimeout(resolve, 800));
-      setProducts(dummyProducts);
-      setLoading(false);
+      try {
+        console.log('📦 About to call fetchAllProducts...');
+        console.log('📦 fetchAllProducts function:', typeof fetchAllProducts);
+        
+        const productsData = await fetchAllProducts();
+        console.log('📦 fetchAllProducts returned:', productsData?.length || 0, 'products');
+        console.log('📦 Full products data:', productsData);
+        
+        // Take first 4 products for featured section
+        const featuredProducts = (productsData || []).slice(0, 4);
+        console.log('⭐ Setting featured products:', featuredProducts.length, 'items');
+        featuredProducts.forEach((product, index) => {
+          console.log(`⭐ Featured Product ${index + 1}:`, {
+            id: product.id,
+            title: product.title,
+            handle: product.handle,
+            hasImages: product.images?.length > 0
+          });
+        });
+        
+        setProducts(featuredProducts);
+      } catch (error) {
+        console.error('❌ Error loading featured products:', error);
+        setProducts([]);
+      } finally {
+        console.log('✅ Setting loading to false');
+        setLoading(false);
+      }
     };
 
     loadProducts();
   }, []);
 
+  console.log('🔍 FeaturedProducts render - loading:', loading, 'products count:', products.length);
+
   if (loading) {
+    console.log('⏳ Showing loading state');
     return (
       <section className="py-32 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -152,6 +91,8 @@ export default function FeaturedProducts() {
     );
   }
 
+  console.log('✅ Rendering main FeaturedProducts section with', products.length, 'products');
+
   return (
     <section className="py-32 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -171,9 +112,9 @@ export default function FeaturedProducts() {
           className="h-px bg-burgundy w-32 mx-auto mb-20"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
-            <motion.div
+            <motion.article
               key={product.id}
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -182,51 +123,94 @@ export default function FeaturedProducts() {
                 delay: 0.4 + index * 0.1,
                 ease: 'easeOut'
               }}
-              className="group cursor-pointer"
+              className="group"
             >
-              {/* Product Image */}
-              <div className="aspect-square relative overflow-hidden bg-cream/30 mb-6">
-                {product.images && product.images.length > 0 ? (
-                  <Image
-                    src={product.images[0].src}
-                    alt={product.images[0].altText || product.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-cream/40">
-                    <div className="text-center text-dark/50">
-                      <div className="text-3xl mb-2">🌹</div>
-                      <p className="text-sm font-light">{product.title}</p>
+              <Link 
+                href={`/shop/${product.handle}`} 
+                className="block focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
+                aria-label={`View details for ${product.title}`}
+              >
+                {/* Product Image */}
+                <div className="aspect-square relative overflow-hidden bg-cream/30 mb-6">
+                  {product.images?.[0] ? (
+                    <Image
+                      src={product.images[0].src}
+                      alt={product.images[0].altText || `${product.title} - luxury preserved rose product`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={index < 4}
+                    />
+                  ) : (
+                    <div 
+                      className="w-full h-full flex items-center justify-center bg-cream/40"
+                      role="img"
+                      aria-label={`${product.title} - no image available`}
+                    >
+                      <div className="text-center text-dark/50">
+                        <div className="text-4xl mb-2">🌹</div>
+                        <p className="text-sm">No image</p>
+                      </div>
                     </div>
+                  )}
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-burgundy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-cream text-sm font-medium tracking-wide">
+                      VIEW DETAILS
+                    </span>
                   </div>
-                )}
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-burgundy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="text-cream text-sm font-medium tracking-wide">
-                    VIEW DETAILS
-                  </button>
-                </div>
-              </div>
 
-              {/* Product Info */}
-              <div className="space-y-3">
-                <h3 className="text-lg font-light text-dark tracking-wide group-hover:text-burgundy transition-colors duration-300">
-                  {product.title}
-                </h3>
-                
-                <p className="text-sm text-dark/60 leading-relaxed line-clamp-2">
-                  {product.description}
-                </p>
-                
-                {product.variants && product.variants.length > 0 && (
-                  <p className="text-lg font-light text-burgundy">
-                    €{product.variants[0].price.amount}
-                  </p>
-                )}
-              </div>
-            </motion.div>
+                  {/* Product Type Badge */}
+                  {product.productType && (
+                    <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium text-dark">
+                      {product.productType}
+                    </div>
+                  )}
+                </div>
+
+                {/* Product Info */}
+                <div className="space-y-3">
+                  <h3 className="text-lg font-light text-dark tracking-wide group-hover:text-burgundy transition-colors duration-300 line-clamp-2">
+                    {product.title}
+                  </h3>
+                  
+                  {product.description && (
+                    <p className="text-sm text-dark/60 leading-relaxed line-clamp-2">
+                      {product.description.length > 120 
+                        ? `${product.description.slice(0, 120)}...` 
+                        : product.description
+                      }
+                    </p>
+                  )}
+                  
+                  {product.variants?.[0] && (
+                    <p className="text-lg font-light text-burgundy">
+                      €{product.variants[0].price.amount} {product.variants[0].price.currencyCode}
+                    </p>
+                  )}
+
+                  {/* Tags */}
+                  {product.tags && product.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1" aria-label="Product tags">
+                      {product.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs text-dark/40 bg-cream/40 px-2 py-1"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {product.tags.length > 2 && (
+                        <span className="text-xs text-dark/40">
+                          +{product.tags.length - 2}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            </motion.article>
           ))}
         </div>
 
