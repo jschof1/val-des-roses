@@ -92,7 +92,7 @@ export const localBusinessData = {
       closes: "17:00"
     }
   ],
-  priceRange: "€€€",
+  priceRange: "£££",
   currenciesAccepted: "EUR",
   paymentAccepted: "Credit Card, PayPal, Bank Transfer"
 };

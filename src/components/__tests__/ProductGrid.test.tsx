@@ -48,7 +48,7 @@ describe('ProductGrid Component', () => {
       render(<ProductGrid products={[mockProduct]} />);
       
       // Price should be formatted as EUR currency
-      expect(screen.getByText(/€29.99/)).toBeInTheDocument();
+      expect(screen.getByText(/£29.99/)).toBeInTheDocument();
     });
 
     it('should render product descriptions on larger screens', () => {

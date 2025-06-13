@@ -186,7 +186,7 @@ export default function FeaturedProducts() {
                   
                   {product.variants?.[0] && (
                     <p className="text-lg font-light text-burgundy">
-                      €{product.variants[0].price.amount} {product.variants[0].price.currencyCode}
+                      £{product.variants[0].price.amount} {product.variants[0].price.currencyCode}
                     </p>
                   )}
 

@@ -35,7 +35,7 @@ export default function ShippingPage() {
                   <h3 className="text-lg font-medium mb-3">France & EU</h3>
                   <p className="text-muted-foreground text-sm">
                     Standard: 3-5 days | Express: 1-2 days<br />
-                    <strong>Free shipping</strong> on orders over €75
+                    <strong>Free shipping</strong> on orders over £75
                   </p>
                 </div>
                 
@@ -43,7 +43,7 @@ export default function ShippingPage() {
                   <h3 className="text-lg font-medium mb-3">International</h3>
                   <p className="text-muted-foreground text-sm">
                     Standard: 7-14 days | Express: 3-7 days<br />
-                    <strong>Free shipping</strong> on orders over €150
+                    <strong>Free shipping</strong> on orders over £150
                   </p>
                 </div>
               </div>

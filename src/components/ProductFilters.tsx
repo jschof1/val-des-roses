@@ -39,10 +39,10 @@ export default function ProductFilters({
 
   const priceRanges: Array<{ value: [number, number]; label: string }> = [
     { value: [0, 200], label: 'All Prices' },
-    { value: [0, 50], label: 'Under €50' },
-    { value: [50, 100], label: '€50 - €100' },
-    { value: [100, 150], label: '€100 - €150' },
-    { value: [150, 200], label: '€150+' }
+    { value: [0, 50], label: 'Under £50' },
+    { value: [50, 100], label: '£50 - £100' },
+    { value: [100, 150], label: '£100 - £150' },
+    { value: [150, 200], label: '£150+' }
   ];
 
   const handleFilterChange = (key: keyof FilterState, value: string | [number, number]) => {

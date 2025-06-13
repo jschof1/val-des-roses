@@ -88,7 +88,7 @@ export default function ProductInfo({ product, selectedVariant, onVariantChange 
   };
 
   const formatPrice = (price: { amount: string; currencyCode: string }) => {
-    return new Intl.NumberFormat('fr-FR', {
+    return new Intl.NumberFormat('en-GB', {
       style: 'currency',
       currency: price.currencyCode
     }).format(parseFloat(price.amount));
@@ -194,8 +194,7 @@ export default function ProductInfo({ product, selectedVariant, onVariantChange 
                           ? 'border-burgundy bg-burgundy text-cream'
                           : 'border-dark/20 text-dark hover:border-burgundy hover:text-burgundy'
                       }`}
-                      aria-pressed={isSelected ? "true" : "false"}
-                      aria-label={`Select ${option.name}: ${value}`}
+                      aria-label={`Select ${option.name}: ${value}${isSelected ? ' (currently selected)' : ''}`}
                     >
                       {value}
                     </button>

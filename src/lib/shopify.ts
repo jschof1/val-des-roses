@@ -53,12 +53,47 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '1',
-        price: { amount: '45.00', currencyCode: 'EUR' }
+        id: '1-pink',
+        price: { amount: '45.00', currencyCode: 'GBP' },
+        title: 'Pink Heritage Rosa Damascena',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' }
+        ]
+      },
+      {
+        id: '1-red',
+        price: { amount: '45.00', currencyCode: 'GBP' },
+        title: 'Red Heritage Rosa Damascena',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Red' }
+        ]
+      },
+      {
+        id: '1-white',
+        price: { amount: '45.00', currencyCode: 'GBP' },
+        title: 'White Heritage Rosa Damascena',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' }
+        ]
+      },
+      {
+        id: '1-yellow',
+        price: { amount: '47.00', currencyCode: 'GBP' },
+        title: 'Yellow Heritage Rosa Damascena',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Yellow' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-1',
+        name: 'Rose Color',
+        values: ['Pink', 'Red', 'White', 'Yellow']
       }
     ],
     productType: 'Single Rose',
-    tags: ['heritage', 'classic', 'pink']
+    tags: ['heritage', 'classic']
   },
   {
     id: '2',
@@ -79,12 +114,39 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '2',
-        price: { amount: '52.00', currencyCode: 'EUR' }
+        id: '2-red',
+        price: { amount: '52.00', currencyCode: 'GBP' },
+        title: 'Red Gallica Officinalis',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Red' }
+        ]
+      },
+      {
+        id: '2-pink',
+        price: { amount: '52.00', currencyCode: 'GBP' },
+        title: 'Pink Gallica Officinalis',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' }
+        ]
+      },
+      {
+        id: '2-white',
+        price: { amount: '52.00', currencyCode: 'GBP' },
+        title: 'White Gallica Officinalis',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-2',
+        name: 'Rose Color',
+        values: ['Red', 'Pink', 'White']
       }
     ],
     productType: 'Single Rose',
-    tags: ['historic', 'medicinal', 'red']
+    tags: ['historic', 'medicinal']
   },
   {
     id: '3',
@@ -105,12 +167,39 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '3',
-        price: { amount: '48.00', currencyCode: 'EUR' }
+        id: '3-white',
+        price: { amount: '48.00', currencyCode: 'GBP' },
+        title: 'White Alba Maxima',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' }
+        ]
+      },
+      {
+        id: '3-cream',
+        price: { amount: '50.00', currencyCode: 'GBP' },
+        title: 'Cream Alba Maxima',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Cream' }
+        ]
+      },
+      {
+        id: '3-pink',
+        price: { amount: '48.00', currencyCode: 'GBP' },
+        title: 'Pink Alba Maxima',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-3',
+        name: 'Rose Color',
+        values: ['White', 'Cream', 'Pink']
       }
     ],
     productType: 'Single Rose',
-    tags: ['white', 'elegant', 'pure']
+    tags: ['elegant', 'pure']
   },
   {
     id: '4',
@@ -131,12 +220,47 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '4',
-        price: { amount: '125.00', currencyCode: 'EUR' }
+        id: '4-mixed',
+        price: { amount: '125.00', currencyCode: 'GBP' },
+        title: 'Mixed Color Luxury Rose Bouquet',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Mixed' }
+        ]
+      },
+      {
+        id: '4-red',
+        price: { amount: '125.00', currencyCode: 'GBP' },
+        title: 'Red Luxury Rose Bouquet',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Red' }
+        ]
+      },
+      {
+        id: '4-pink',
+        price: { amount: '125.00', currencyCode: 'GBP' },
+        title: 'Pink Luxury Rose Bouquet',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' }
+        ]
+      },
+      {
+        id: '4-white',
+        price: { amount: '125.00', currencyCode: 'GBP' },
+        title: 'White Luxury Rose Bouquet',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-4',
+        name: 'Rose Color',
+        values: ['Mixed', 'Red', 'Pink', 'White']
       }
     ],
     productType: 'Bouquet',
-    tags: ['luxury', 'arrangement', 'mixed']
+    tags: ['luxury', 'arrangement']
   },
   {
     id: '5',
@@ -157,8 +281,70 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '5',
-        price: { amount: '85.00', currencyCode: 'EUR' }
+        id: '5-red-black',
+        price: { amount: '85.00', currencyCode: 'GBP' },
+        title: 'Red Roses in Black Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Red' },
+          { name: 'Box Color', value: 'Black' }
+        ]
+      },
+      {
+        id: '5-red-white',
+        price: { amount: '85.00', currencyCode: 'GBP' },
+        title: 'Red Roses in White Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Red' },
+          { name: 'Box Color', value: 'White' }
+        ]
+      },
+      {
+        id: '5-pink-black',
+        price: { amount: '85.00', currencyCode: 'GBP' },
+        title: 'Pink Roses in Black Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' },
+          { name: 'Box Color', value: 'Black' }
+        ]
+      },
+      {
+        id: '5-pink-white',
+        price: { amount: '85.00', currencyCode: 'GBP' },
+        title: 'Pink Roses in White Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pink' },
+          { name: 'Box Color', value: 'White' }
+        ]
+      },
+      {
+        id: '5-white-black',
+        price: { amount: '85.00', currencyCode: 'GBP' },
+        title: 'White Roses in Black Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' },
+          { name: 'Box Color', value: 'Black' }
+        ]
+      },
+      {
+        id: '5-white-gold',
+        price: { amount: '95.00', currencyCode: 'GBP' },
+        title: 'White Roses in Gold Box',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'White' },
+          { name: 'Box Color', value: 'Gold' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-5',
+        name: 'Rose Color',
+        values: ['Red', 'Pink', 'White']
+      },
+      {
+        id: 'box-color-5',
+        name: 'Box Color',
+        values: ['Black', 'White', 'Gold']
       }
     ],
     productType: 'Box Arrangement',
@@ -183,8 +369,35 @@ const dummyProducts = [
     ],
     variants: [
       {
-        id: '6',
-        price: { amount: '95.00', currencyCode: 'EUR' }
+        id: '6-mixed',
+        price: { amount: '95.00', currencyCode: 'GBP' },
+        title: 'Mixed Vintage Garden Collection',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Mixed Vintage' }
+        ]
+      },
+      {
+        id: '6-pastels',
+        price: { amount: '95.00', currencyCode: 'GBP' },
+        title: 'Pastel Vintage Garden Collection',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Pastel Mix' }
+        ]
+      },
+      {
+        id: '6-deep',
+        price: { amount: '98.00', currencyCode: 'GBP' },
+        title: 'Deep Tones Vintage Garden Collection',
+        selectedOptions: [
+          { name: 'Rose Color', value: 'Deep Tones' }
+        ]
+      }
+    ],
+    options: [
+      {
+        id: 'rose-color-6',
+        name: 'Rose Color',
+        values: ['Mixed Vintage', 'Pastel Mix', 'Deep Tones']
       }
     ],
     productType: 'Collection',

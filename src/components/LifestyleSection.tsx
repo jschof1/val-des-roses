@@ -99,8 +99,6 @@ export default function LifestyleSection() {
           </div>
         </motion.div>
       </div>
-
-      {/* Third lifestyle block - Full width with centered content */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}

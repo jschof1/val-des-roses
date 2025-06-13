@@ -16,7 +16,7 @@ export default function CareGuidePage() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-4xl md:text-6xl font-light tracking-wider mb-8 text-burgundy"
           >
-            Rose Care Guide
+            Preserved Rose Care Guide
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -24,13 +24,13 @@ export default function CareGuidePage() {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="text-lg md:text-xl text-dark/80 leading-relaxed"
           >
-            Discover the essential practices for nurturing your heritage roses to their full potential, 
-            guided by decades of cultivation expertise from our Provence gardens.
+            Experience the timeless beauty of our preserved roses with minimal care. 
+            Sustainably crafted to last years, not weeks—luxury that honors nature.
           </motion.p>
         </div>
       </section>
 
-      {/* Planting Section */}
+      {/* What Are Preserved Roses Section */}
       <section className="py-20 px-4 bg-burgundy">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -41,27 +41,30 @@ export default function CareGuidePage() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-cream">
-                Planting Your Roses
+                The Art of Preservation
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Location Selection</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Natural Beauty, Lasting</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Choose a spot with 6+ hours of morning sunlight and good air circulation. 
-                    Avoid areas with standing water or strong winds.
+                    Our preserved roses are real roses that undergo a special preservation process, 
+                    replacing their natural sap with eco-friendly glycerin to maintain their 
+                    softness and natural appearance for years.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Soil Preparation</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Sustainable Luxury</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Ensure well-draining soil with pH 6.0-7.0. Enrich with organic compost 
-                    and aged manure before planting.
+                    By choosing preserved roses, you're making an eco-conscious decision. 
+                    No water, no fertilizers, no pesticides—just enduring beauty that reduces 
+                    environmental impact while bringing joy for years.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Best Timing</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Perfect Every Day</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Plant in early spring after the last frost, or in fall 6-8 weeks before the first frost.
+                    Unlike fresh flowers that wilt in days, our preserved roses maintain their 
+                    peak beauty for 3-5 years with virtually no maintenance required.
                   </p>
                 </div>
               </div>
@@ -76,7 +79,7 @@ export default function CareGuidePage() {
             >
               <Image
                 src="/images/planting-roses.jpg"
-                alt="Planting heritage roses in garden"
+                alt="Beautiful preserved roses in elegant arrangement"
                 fill
                 className="object-cover"
               />
@@ -85,7 +88,7 @@ export default function CareGuidePage() {
         </div>
       </section>
 
-      {/* Watering & Feeding */}
+      {/* Simple Care Instructions */}
       <section className="py-20 px-4 bg-cream">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -96,10 +99,11 @@ export default function CareGuidePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-burgundy">
-              Watering & Feeding
+              Effortless Care
             </h2>
             <p className="text-lg text-dark/70 max-w-3xl mx-auto leading-relaxed">
-              Proper nutrition and hydration are essential for healthy growth and abundant blooms.
+              Enjoy the luxury of roses without the maintenance. Our preserved roses require 
+              minimal care to maintain their stunning appearance.
             </p>
           </motion.div>
 
@@ -111,10 +115,10 @@ export default function CareGuidePage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-white/50 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">Deep Watering</h3>
+              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">No Water Needed</h3>
               <p className="text-dark/70 leading-relaxed">
-                Water deeply 1-2 times per week rather than frequent shallow watering. 
-                Apply water at soil level to avoid wetting foliage.
+                Never water your preserved roses. They maintain their beauty through our 
+                special glycerin preservation process, not water.
               </p>
             </motion.div>
 
@@ -125,10 +129,10 @@ export default function CareGuidePage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-burgundy/10 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">Seasonal Feeding</h3>
+              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">Keep Dry</h3>
               <p className="text-dark/70 leading-relaxed">
-                Feed with balanced fertilizer in early spring, then monthly during growing season. 
-                Use organic compost and bone meal for best results.
+                Place in a dry environment away from humidity, steam, and moisture. 
+                Avoid bathrooms, kitchens, or areas with high humidity.
               </p>
             </motion.div>
 
@@ -139,17 +143,17 @@ export default function CareGuidePage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-white/50 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">Mulching</h3>
+              <h3 className="text-xl font-medium tracking-wide mb-4 text-burgundy">Gentle Dusting</h3>
               <p className="text-dark/70 leading-relaxed">
-                Apply 2-3 inches of organic mulch around the base to retain moisture, 
-                suppress weeds, and regulate soil temperature.
+                Occasionally dust with a soft, dry brush or cloth. Handle with care 
+                to maintain their delicate texture and natural appearance.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Pruning Section */}
+      {/* Placement & Environment */}
       <section className="py-20 px-4 bg-dark">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -162,7 +166,7 @@ export default function CareGuidePage() {
             >
               <Image
                 src="/images/pruning-roses.jpg"
-                alt="Pruning heritage roses with proper technique"
+                alt="Preserved roses in perfect home setting"
                 fill
                 className="object-cover"
               />
@@ -176,28 +180,28 @@ export default function CareGuidePage() {
               className="order-1 lg:order-2"
             >
               <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-cream">
-                Pruning & Maintenance
+                Perfect Placement
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">When to Prune</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Ideal Environment</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Prune in late winter or early spring, just before new growth begins. 
-                    Remove dead, diseased, or damaged wood first.
+                    Choose a location with room temperature (60-75°F) and normal humidity. 
+                    Living rooms, bedrooms, and offices are perfect environments.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Pruning Technique</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Light Considerations</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Make clean cuts at a 45-degree angle, ¼ inch above an outward-facing bud. 
-                    Use sharp, clean pruning shears to prevent disease transmission.
+                    While our preserved roses can handle normal indoor lighting, 
+                    avoid prolonged direct sunlight which may cause gradual color fading.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Deadheading</h3>
+                  <h3 className="text-xl font-medium mb-3 text-cream">Display Options</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    Remove spent blooms regularly to encourage repeat flowering. 
-                    Cut back to the first strong five-leaflet leaf.
+                    Perfect for tabletops, shelving, mantels, or anywhere you want 
+                    to add natural beauty without the commitment of fresh flower care.
                   </p>
                 </div>
               </div>
@@ -206,7 +210,7 @@ export default function CareGuidePage() {
         </div>
       </section>
 
-      {/* Disease Prevention */}
+      {/* Sustainability & Benefits */}
       <section className="py-20 px-4 bg-cream">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -216,32 +220,35 @@ export default function CareGuidePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-burgundy">
-              Disease Prevention
+              Sustainable Beauty
             </h2>
             <p className="text-lg text-dark/70 leading-relaxed mb-12">
-              Healthy roses are naturally more resistant to common diseases. 
-              Prevention is always better than treatment.
+              Our preserved roses represent a commitment to sustainable luxury—
+              beautiful choices that honor both elegance and environmental responsibility.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 bg-burgundy text-cream">
-                <h3 className="text-lg font-medium mb-3">Good Air Circulation</h3>
+                <h3 className="text-lg font-medium mb-3">Zero Waste</h3>
                 <p className="text-cream/80 text-sm leading-relaxed">
-                  Space plants properly and prune to allow air flow through the center of the bush.
+                  No wilted petals, no weekly replacements. One purchase brings 
+                  years of beauty without waste.
                 </p>
               </div>
               
               <div className="p-6 bg-white/70 backdrop-blur-sm">
-                <h3 className="text-lg font-medium mb-3 text-burgundy">Avoid Overhead Watering</h3>
+                <h3 className="text-lg font-medium mb-3 text-burgundy">Water Conservation</h3>
                 <p className="text-dark/70 text-sm leading-relaxed">
-                  Water at soil level to keep foliage dry and prevent fungal diseases.
+                  Save thousands of gallons of water over time. No daily watering, 
+                  no irrigation systems needed.
                 </p>
               </div>
               
               <div className="p-6 bg-burgundy text-cream">
-                <h3 className="text-lg font-medium mb-3">Regular Inspection</h3>
+                <h3 className="text-lg font-medium mb-3">Chemical-Free</h3>
                 <p className="text-cream/80 text-sm leading-relaxed">
-                  Check plants weekly for early signs of disease or pest problems.
+                  No pesticides, fertilizers, or harmful chemicals. Pure, natural 
+                  beauty preserved through eco-friendly processes.
                 </p>
               </div>
             </div>

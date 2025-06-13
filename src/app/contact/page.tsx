@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { useState } from 'react';
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export default function ContactPage() {
@@ -164,10 +165,10 @@ export default function ContactPage() {
             className="text-center mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-dark">
-              Visit Our Garden
+              Explore Our Collection
             </h2>
             <p className="text-lg text-dark/60 max-w-3xl mx-auto leading-relaxed">
-              Experience the beauty of our heritage roses in person at our gardens in Provence, France.
+              Discover our exquisite selection of preserved heritage roses, each one carefully crafted to bring timeless beauty to your home.
             </p>
           </motion.div>
 
@@ -185,12 +186,12 @@ export default function ContactPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Our Gardens</h3>
+              <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Our Office</h3>
               <p className="text-dark/60 leading-relaxed mb-2">
-                Domaine Val des Roses<br />
-                Route de la Lavande<br />
-                84220 Gordes, Provence<br />
-                France
+                Office 4,<br />
+                41 S Audley St,<br />
+                London W1K 2PS,<br />
+                United Kingdom
               </p>
             </motion.div>
 
@@ -208,8 +209,8 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-light tracking-wide mb-4 text-burgundy">Phone & Email</h3>
               <p className="text-dark/60 leading-relaxed">
-                <a href="tel:+33490720145" className="hover:text-burgundy transition-colors duration-300">
-                  +33 (0)4 90 72 01 45
+                <a href="tel:+447436229066" className="hover:text-burgundy transition-colors duration-300">
+                  +44 7436 229066
                 </a>
               </p>
               <p className="text-dark/60 leading-relaxed">
@@ -228,21 +229,36 @@ export default function ContactPage() {
             >
               <div className="mb-6">
                 <svg className="w-8 h-8 mx-auto text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 1L5 3l4 2 4-2-4-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Garden Hours</h3>
+              <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Same-Day Delivery</h3>
               <p className="text-dark/60 leading-relaxed">
-                March - October:<br />
-                9:00 AM - 6:00 PM<br />
+                Order before 2 PM for<br />
+                same-day delivery in London<br />
                 <br />
-                November - February:<br />
-                10:00 AM - 4:00 PM<br />
+                Next-day delivery available<br />
+                across the UK<br />
                 <br />
-                <em>Closed Sundays</em>
+                <em>Monday - Saturday</em>
               </p>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <Link 
+              href="/shop"
+              className="inline-block px-8 py-4 bg-burgundy text-cream font-medium tracking-wider hover:bg-burgundy/90 transition-colors duration-300 text-lg"
+            >
+              Shop Our Roses
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -288,19 +304,6 @@ export default function ContactPage() {
               <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Do you offer international shipping?</h3>
               <p className="text-dark/60 leading-relaxed">
                 Yes, we ship worldwide. Shipping times and costs vary by destination. All our roses are carefully packaged to ensure they arrive in perfect condition.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="bg-white p-8 border border-cream/50"
-            >
-              <h3 className="text-xl font-light tracking-wide mb-4 text-dark">Can I visit your gardens?</h3>
-              <p className="text-dark/60 leading-relaxed">
-                Absolutely! We welcome visitors to our gardens in Provence. Please contact us in advance to schedule your visit and ensure we can provide you with the best experience.
               </p>
             </motion.div>
 

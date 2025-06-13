@@ -10,13 +10,14 @@ import {
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 export default function BrandIntro() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="py-32 px-4 bg-white">
+    <section ref={ref} className="py-32 px-4 bg-burgundy">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Text Content */}
@@ -26,7 +27,7 @@ export default function BrandIntro() {
           >
             <AnimatedText
               as="h2"
-              className="text-5xl lg:text-6xl font-light tracking-wide text-dark leading-tight"
+              className="text-5xl lg:text-6xl font-light tracking-wide text-white leading-tight"
               delay={0.2}
             >
               Heritage Meets Modern Elegance
@@ -43,9 +44,9 @@ export default function BrandIntro() {
               animation="fadeInUp"
               delay={0.4}
             >
-              <p className="text-xl text-dark/70 leading-relaxed">
-                For over three generations, Val des Roses has been cultivating the world&apos;s most
-                exquisite heritage roses. Each bloom tells a story of dedication, craftsmanship,
+              <p className="text-xl text-white/80 leading-relaxed">
+                For over a decade, Val des Roses has been cultivating the world&apos;s most
+                exquisite preserved roses from Ecuador. Each bloom tells a story of dedication, craftsmanship,
                 and an unwavering commitment to beauty.
               </p>
             </AnimatedSection>
@@ -54,7 +55,7 @@ export default function BrandIntro() {
               animation="fadeInUp"
               delay={0.6}
             >
-              <p className="text-lg text-dark/60 leading-relaxed">
+              <p className="text-lg text-white/70 leading-relaxed">
                 From our valley gardens to your home, we bring you roses that embody
                 timeless elegance and natural perfection.
               </p>
@@ -64,9 +65,11 @@ export default function BrandIntro() {
               animation="fadeInUp"
               delay={0.8}
             >
-              <AnimatedSecondaryButton>
-                DISCOVER OUR HERITAGE
-              </AnimatedSecondaryButton>
+              <Link href="/about">
+                <AnimatedSecondaryButton>
+                  DISCOVER OUR HERITAGE
+                </AnimatedSecondaryButton>
+              </Link>
             </AnimatedSection>
           </AnimatedSection>
 
@@ -78,7 +81,7 @@ export default function BrandIntro() {
           >
             <div className="w-full h-full bg-cream/40 flex items-center justify-center">
               {/* Placeholder for brand image */}
-              <div className="text-center text-dark/50">
+              <div className="text-center text-white/60">
                 <motion.div 
                   className="text-6xl mb-4"
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -110,22 +113,22 @@ export default function BrandIntro() {
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-burgundy mb-3">1952</h3>
-              <p className="text-dark/60 tracking-wide">Founded</p>
+              <h3 className="text-3xl font-light text-white mb-3">2003</h3>
+              <p className="text-white/70 tracking-wide">Founded</p>
             </motion.div>
             <motion.div 
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-burgundy mb-3">200+</h3>
-              <p className="text-dark/60 tracking-wide">Rose Varieties</p>
+              <h3 className="text-3xl font-light text-white mb-3">20+</h3>
+              <p className="text-white/70 tracking-wide">Rose Varieties</p>
             </motion.div>
             <motion.div 
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-burgundy mb-3">3</h3>
-              <p className="text-dark/60 tracking-wide">Generations</p>
+              <h3 className="text-3xl font-light text-white mb-3">Same-Day</h3>
+              <p className="text-white/70 tracking-wide">Delivery Available</p>
             </motion.div>
           </motion.div>
         </AnimatedSection>

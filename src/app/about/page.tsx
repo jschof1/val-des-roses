@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export default function AboutPage() {
@@ -56,7 +57,7 @@ export default function AboutPage() {
               A Heritage of Excellence
             </h2>
             <p className="text-lg text-dark/60 max-w-3xl mx-auto leading-relaxed">
-              Founded by Marcel Dubois in 1952, our rose garden began as a quest to preserve the heritage varieties that were disappearing from French gardens.
+              Founded in 2003, our rose garden began as a quest to preserve the heritage varieties that were disappearing from French gardens.
             </p>
           </motion.div>
 
@@ -71,14 +72,14 @@ export default function AboutPage() {
               <div className="relative h-80 mb-8">
                 <Image
                   src="/images/heritage-1952.jpg"
-                  alt="Marcel Dubois in the original garden, 1952"
+                  alt="The original garden, 2003"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-light tracking-wide mb-4 text-dark">1952 - The Beginning</h3>
+              <h3 className="text-2xl font-light tracking-wide mb-4 text-dark">2003 - The Beginning</h3>
               <p className="text-dark/60 leading-relaxed">
-                Marcel Dubois plants the first heritage roses on his family estate, determined to preserve varieties dating back centuries.
+                The first heritage roses are planted on the family estate, determined to preserve varieties dating back centuries.
               </p>
             </motion.div>            <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -90,12 +91,12 @@ export default function AboutPage() {
               <div className="relative h-80 mb-8">
                 <Image
                   src="/images/heritage-1980s.jpg"
-                  alt="Garden expansion in the 1980s"
+                  alt="Garden expansion in the 2010s"
                   fill
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-light tracking-wide mb-4 text-burgundy">1980s - Expansion</h3>
+              <h3 className="text-2xl font-light tracking-wide mb-4 text-burgundy">2010s - Expansion</h3>
               <p className="text-dark/60 leading-relaxed">
                 The garden expands to include over 200 varieties, becoming a sanctuary for rare and endangered rose species.
               </p>
@@ -118,7 +119,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-light tracking-wide mb-4 text-dark">Today - Global Reach</h3>
               <p className="text-dark/60 leading-relaxed">
-                Now led by the third generation, we share our passion worldwide while maintaining our commitment to heritage preservation.
+                Now led by the second generation, we share our passion worldwide while maintaining our commitment to heritage preservation.
               </p>
             </motion.div>
           </div>
@@ -203,33 +204,49 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-cream">
-              Visit Our Gardens
+              Order Your Roses Today
             </h2>
             <p className="text-lg text-cream/80 leading-relaxed mb-12">
-              Experience the beauty of our heritage roses firsthand. Our gardens are open for guided tours and private events throughout the growing season.
+              Bring the timeless beauty of heritage roses to your doorstep. We offer same-day delivery across London and surrounding areas for orders placed before 2 PM.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Location</h3>
+                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Our Location</h3>
                 <p className="text-cream/80 leading-relaxed">
-                  123 Rose Valley Lane<br />
-                  Provence, France 84000<br />
+                  Office 4, 41 S Audley St<br />
+                  London W1K 2PS<br />
+                  United Kingdom<br />
                   <br />
-                  <strong className="text-cream">GPS:</strong> 43.9493°N, 4.8055°E
+                  <strong className="text-cream">Same-Day Delivery Available</strong>
                 </p>
               </div>
               
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Contact</h3>
+                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Contact Us</h3>
                 <p className="text-cream/80 leading-relaxed">
-                  <strong className="text-cream">Phone:</strong> +33 4 90 123 456<br />
+                  <strong className="text-cream">Phone:</strong> +44 7436 229066<br />
                   <strong className="text-cream">Email:</strong> hello@valdesroses.com<br />
                   <br />
-                  <strong className="text-cream">Garden Tours:</strong> tours@valdesroses.com
+                  <strong className="text-cream">Orders:</strong> orders@valdesroses.com
                 </p>
               </div>
             </div>
+            
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+              viewport={{ once: true }}
+              className="mt-12"
+            >
+              <Link 
+                href="/shop"
+                className="inline-block px-8 py-4 bg-cream text-dark font-medium tracking-wider hover:bg-cream/90 transition-colors duration-300 text-lg"
+              >
+                Browse Our Collection
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
