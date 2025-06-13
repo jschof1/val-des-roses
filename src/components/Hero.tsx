@@ -61,7 +61,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl font-light tracking-wide mb-12 max-w-3xl mx-auto text-dark/80 leading-relaxed">
             Heritage roses cultivated with passion and elegance
             <br className="hidden md:block" />
-            in the heart of the valley since 1952
+            in the heart of the valley since 2003
           </p>
         </AnimatedSection>
 

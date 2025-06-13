@@ -18,7 +18,7 @@ export const organizationData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Val des Roses",
-  description: "Luxury preserved roses crafted with timeless elegance and heritage since 1952",
+  description: "Luxury preserved roses crafted with timeless elegance and heritage since 2003",
   url: "https://valdesroses.com",
   logo: "https://valdesroses.com/logo.png",
   sameAs: [
@@ -37,7 +37,7 @@ export const organizationData = {
     addressCountry: "FR",
     addressLocality: "Paris"
   },
-  foundingDate: "1952",
+  foundingDate: "2003",
   numberOfEmployees: "10-50"
 };
 

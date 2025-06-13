@@ -19,7 +19,7 @@ export default function Footer() {
           >
             <h3 className="text-2xl font-light tracking-wider mb-4">VAL DES ROSES</h3>
             <p className="text-background/70 leading-relaxed mb-6">
-              Cultivating beauty through heritage roses since 1952. 
+              Cultivating beauty through heritage roses since 2003. 
               Each bloom tells a story of passion and dedication.
             </p>
             <div className="flex space-x-4">

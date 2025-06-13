@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "Val des Roses - Luxury Preserved Roses",
     template: "%s | Val des Roses"
   },
-  description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 1952. Premium preserved roses that last forever.",
+  description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003. Premium preserved roses that last forever.",
   keywords: [
     "preserved roses",
     "luxury roses",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: "https://valdesroses.com",
     siteName: "Val des Roses",
     title: "Val des Roses - Luxury Preserved Roses",
-    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 1952.",
+    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003.",
     images: [
       {
         url: "/og-image.jpg",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Val des Roses - Luxury Preserved Roses",
-    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 1952.",
+    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003.",
     images: ["/og-image.jpg"],
     creator: "@valdesroses",
   },

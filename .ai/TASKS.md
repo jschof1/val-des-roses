@@ -45,3 +45,22 @@
 - [x] **ID 13: Deployment & Analytics** (Priority: medium)
 > Set up Vercel deployment, custom domain, and analytics/SEO. Ensure environment is production-ready.
 > Dependencies: 12
+
+- [ ] **ID 14: Vallée des Roses Brand Content Update** (Priority: high)
+> Update all website copy to reflect Vallée des Roses branding, Iryna's story, and preserved roses business focus. Replace generic content with authentic brand messaging.
+
+- [ ] **ID 15: London Same-Day Delivery Feature** (Priority: high)
+> Implement same-day delivery option for London postcodes with postcode validation, delivery fee calculation, and cart integration.
+> Dependencies: 7
+
+- [ ] **ID 16: Preserved Roses Education Content** (Priority: medium)
+> Add comprehensive preserved roses education section with care instructions, longevity information, and comparison with fresh/artificial flowers.
+> Dependencies: 14
+
+- [ ] **ID 17: Conversion Optimization Improvements** (Priority: high)
+> Implement conversion-focused features like urgency indicators, social proof elements, improved CTAs, and trust signals to increase sales conversion.
+> Dependencies: 14, 15
+
+- [ ] **ID 18: Homepage Hero & Navigation Updates** (Priority: high)
+> Update homepage hero section with Vallée des Roses messaging, improve navigation with delivery info prominence, and add London delivery callout.
+> Dependencies: 14, 15

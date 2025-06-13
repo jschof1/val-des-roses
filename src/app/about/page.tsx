@@ -23,7 +23,7 @@ export default function AboutPage() {
               For over seven decades, Val des Roses has been cultivating the world&apos;s most beautiful heritage roses in the heart of Provence, France.
             </p>
             <p className="text-base md:text-lg text-dark/60 leading-relaxed">
-              What began as a family passion in 1952 has grown into a legacy of preserving rare rose varieties and sharing their timeless beauty with the world.
+              What began as a family passion in 2003 has grown into a legacy of preserving rare rose varieties and sharing their timeless beauty with the world.
             </p>
           </motion.div>
           
@@ -71,7 +71,7 @@ export default function AboutPage() {
             >
               <div className="relative h-80 mb-8">
                 <Image
-                  src="/images/heritage-1952.jpg"
+                  src="/images/heritage-2003.jpg"
                   alt="The original garden, 2003"
                   fill
                   className="object-cover"
