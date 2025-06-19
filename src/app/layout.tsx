@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import PromotionalBar from "@/components/PromotionalBar";
-import Header from "@/components/Header";
+import HeaderWrapper from "@/components/HeaderWrapper";
 import CartDrawer from "@/components/CartDrawer";
 import SkipLink from "@/components/SkipLink";
 import NotificationManager from "@/components/NotificationManager";
@@ -113,9 +112,8 @@ export default function RootLayout({
           gtmId={process.env.NEXT_PUBLIC_GTM_ID}
         />
         <SkipLink />
-        <PromotionalBar />
-        <Header />
-        <main id="main-content" className="pt-24" tabIndex={-1}>
+        <HeaderWrapper />
+        <main id="main-content" tabIndex={-1}>
           {children}
         </main>
         <CartDrawer />

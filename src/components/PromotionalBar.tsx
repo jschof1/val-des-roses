@@ -9,12 +9,8 @@ export default function PromotionalBar() {
   if (!isVisible) return null;
 
   return (
-    <motion.div
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -50, opacity: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="fixed top-0 left-0 right-0 z-50 bg-burgundy text-cream"
+    <div
+      className="bg-burgundy text-cream"
       role="banner"
       aria-label="Promotional announcement"
     >
@@ -23,16 +19,13 @@ export default function PromotionalBar() {
           <div className="flex-1" />
           
           {/* Promotional Message */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+          <div
             className="text-center"
           >
             <p className="text-sm font-medium tracking-wide">
               ✨ Same Day Delivery Available in London ✨
             </p>
-          </motion.div>
+          </div>
 
           {/* Close Button */}
           <div className="flex-1 flex justify-end">
@@ -61,6 +54,6 @@ export default function PromotionalBar() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 } 
