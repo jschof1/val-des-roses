@@ -24,9 +24,9 @@ export default function Header() {
       role="banner"
     >
       <div className="max-w-7xl mx-auto px-4 py-4">
-        <div className="grid grid-cols-3 items-center">
+        <div className="relative flex items-center justify-between">
           {/* Logo */}
-          <div className="justify-self-start">
+          <div className="flex-1 min-w-0">
             <Link 
               href="/" 
               className="flex items-center space-x-2" 
@@ -35,15 +35,15 @@ export default function Header() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
-                className="text-2xl lg:text-lg font-light tracking-[0.15em] text-dark"
+                className="text-base md:text-xl font-light tracking-wide text-dark whitespace-nowrap"
               >
-                                  VALLÉE DES ROSES
+                  VALLÉE DES ROSES
               </motion.div>
             </Link>
           </div>
 
           {/* Desktop Navigation - Always Centered */}
-          <nav className="hidden md:flex items-center justify-center space-x-8" role="navigation" aria-label="Main navigation">
+          <nav className="hidden md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:flex items-center justify-center space-x-8" role="navigation" aria-label="Main navigation">
             <motion.div
               initial="initial"
               whileHover="hover"
@@ -118,7 +118,7 @@ export default function Header() {
           </nav>
 
           {/* Cart & Mobile Menu Toggle */}
-          <div className="flex items-center justify-end space-x-4">
+          <div className="flex flex-1 min-w-0 items-center justify-end space-x-4">
             {/* Cart Icon */}
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -189,81 +189,34 @@ export default function Header() {
           aria-hidden={!isMobileMenuOpen}
         >
           <div className="py-4 space-y-4 border-t border-cream/40 mt-4">
-            <motion.div
-              initial="initial"
-              whileHover="hover"
-              className="relative inline-block"
-            >
-              <Link
+            <Link
                 href="/shop"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
                 className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 SHOP
               </Link>
-              <motion.div
-                variants={underlineVariants}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial="initial"
-              whileHover="hover"
-              className="relative inline-block"
-            >
-              <Link
+            <Link
                 href="/about"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
                 className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 ABOUT
               </Link>
-              <motion.div
-                variants={underlineVariants}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial="initial"
-              whileHover="hover"
-              className="relative inline-block"
-            >
-              <Link
+            <Link
                 href="/care-guide"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
                 className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 CARE GUIDE
               </Link>
-              <motion.div
-                variants={underlineVariants}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial="initial"
-              whileHover="hover"
-              className="relative inline-block"
-            >
-              <Link
+            <Link
                 href="/contact"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
                 className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 CONTACT
               </Link>
-              <motion.div
-                variants={underlineVariants}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
-              />
-            </motion.div>
           </div>
         </motion.nav>
       </div>
