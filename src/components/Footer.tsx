@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,11 +45,11 @@ export default function Footer() {
           >
             <h4 className="text-lg font-medium tracking-wide mb-4">SHOP</h4>
             <ul className="space-y-3">
-              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">All Products</a></li>
-              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Preserved Roses</a></li>
-              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Luxury Arrangements</a></li>
-              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Bespoke Designs</a></li>
-              <li><a href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</a></li>
+              <li><Link href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">All Products</Link></li>
+              <li><Link href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Preserved Roses</Link></li>
+              <li><Link href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Luxury Arrangements</Link></li>
+              <li><Link href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Bespoke Designs</Link></li>
+              <li><Link href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</Link></li>
             </ul>
           </motion.div>
 
@@ -61,11 +62,11 @@ export default function Footer() {
           >
             <h4 className="text-lg font-medium tracking-wide mb-4">ABOUT</h4>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">About Iryna</a></li>
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Our Process</a></li>
-              <li><a href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</a></li>
-              <li><a href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">London Delivery</a></li>
-              <li><a href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">Contact</a></li>
+              <li><Link href="/about" className="text-background/70 hover:text-background transition-colors duration-300">About Iryna</Link></li>
+              <li><Link href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Our Process</Link></li>
+              <li><Link href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</Link></li>
+              <li><Link href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">London Delivery</Link></li>
+              <li><Link href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">Contact</Link></li>
             </ul>
           </motion.div>
 
@@ -78,11 +79,11 @@ export default function Footer() {
           >
             <h4 className="text-lg font-medium tracking-wide mb-4">SUPPORT</h4>
             <ul className="space-y-3">
-              <li><a href="/shipping" className="text-background/70 hover:text-background transition-colors duration-300">Shipping Info</a></li>
-              <li><a href="/returns" className="text-background/70 hover:text-background transition-colors duration-300">Returns</a></li>
+              <li><Link href="/shipping" className="text-background/70 hover:text-background transition-colors duration-300">Shipping Info</Link></li>
+              <li><Link href="/returns" className="text-background/70 hover:text-background transition-colors duration-300">Returns</Link></li>
               <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">FAQ</a></li>
-              <li><a href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Size Guide</a></li>
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Customer Care</a></li>
+              <li><Link href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Size Guide</Link></li>
+              <li><Link href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Customer Care</Link></li>
             </ul>
           </motion.div>
         </div>
@@ -132,15 +133,15 @@ export default function Footer() {
             © {currentYear} Vallée des Roses. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <a href="/privacy-policy" className="text-background/70 hover:text-background transition-colors duration-300">
+            <Link href="/privacy-policy" className="text-background/70 hover:text-background transition-colors duration-300">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="text-background/70 hover:text-background transition-colors duration-300">
+            </Link>
+            <Link href="/terms-of-service" className="text-background/70 hover:text-background transition-colors duration-300">
               Terms of Service
-            </a>
-            <a href="/privacy-policy" className="text-background/70 hover:text-background transition-colors duration-300">
+            </Link>
+            <Link href="/privacy-policy" className="text-background/70 hover:text-background transition-colors duration-300">
               Cookies
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

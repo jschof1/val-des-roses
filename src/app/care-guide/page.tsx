@@ -55,7 +55,7 @@ export default function CareGuidePage() {
                 <div>
                   <h3 className="text-xl font-medium mb-3 text-cream">Sustainable Luxury</h3>
                   <p className="text-cream/80 leading-relaxed">
-                    By choosing preserved roses, you're making an eco-conscious decision. 
+                    By choosing preserved roses, you&apos;re making an eco-conscious decision. 
                     No water, no fertilizers, no pesticides—just enduring beauty that reduces 
                     environmental impact while bringing joy for years.
                   </p>
