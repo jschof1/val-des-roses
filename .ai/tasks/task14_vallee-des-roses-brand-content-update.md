@@ -1,14 +1,14 @@
 ---
 id: 14
 title: 'Vallée des Roses Brand Content Update'
-status: pending
+status: completed
 priority: high
 feature: Brand Identity & Content
 dependencies: []
 assigned_agent: null
 created_at: "2025-06-13T13:56:47Z"
-started_at: null
-completed_at: null
+started_at: "2025-06-13T14:00:20Z"
+completed_at: "2025-06-13T15:25:57Z"
 error_log: null
 ---
 

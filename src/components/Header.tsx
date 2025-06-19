@@ -30,14 +30,14 @@ export default function Header() {
             <Link 
               href="/" 
               className="flex items-center space-x-2" 
-              aria-label="Val des Roses - Go to homepage"
+              aria-label="Vallée des Roses - Go to homepage"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 className="text-2xl lg:text-lg font-light tracking-[0.15em] text-dark"
               >
-                VAL DES ROSES
+                                  VALLÉE DES ROSES
               </motion.div>
             </Link>
           </div>

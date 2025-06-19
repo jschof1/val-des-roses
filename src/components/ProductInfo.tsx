@@ -233,7 +233,7 @@ export default function ProductInfo({ product, selectedVariant, onVariantChange 
               min="1"
               value={quantity}
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-              className="px-4 sm:px-6 py-3 border-x border-dark/20 min-w-[60px] sm:min-w-[80px] text-center bg-transparent focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
+              className="text-black px-4 sm:px-6 py-3 border-x border-dark/20 min-w-[60px] sm:min-w-[80px] text-center bg-transparent focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
               aria-label="Quantity"
             />
             <button

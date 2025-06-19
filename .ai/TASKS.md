@@ -46,7 +46,7 @@
 > Set up Vercel deployment, custom domain, and analytics/SEO. Ensure environment is production-ready.
 > Dependencies: 12
 
-- [ ] **ID 14: Vallée des Roses Brand Content Update** (Priority: high)
+- [x] **ID 14: Vallée des Roses Brand Content Update** (Priority: high)
 > Update all website copy to reflect Vallée des Roses branding, Iryna's story, and preserved roses business focus. Replace generic content with authentic brand messaging.
 
 - [ ] **ID 15: London Same-Day Delivery Feature** (Priority: high)

@@ -1,108 +1,171 @@
 'use client';
 
 import { motion } from 'motion/react';
-import Image from 'next/image';
-import { 
-  AnimatedSection,
-  AnimatedText,
-  AnimatedLinkButton,
-  scaleInVariants,
-  floatingVariants
-} from '@/components/animations';
 
+// Elegant text reveal component with dramatic timing
+const MinimalistTextReveal = ({ children, delay = 0, className = '' }: {
+  children: string;
+  delay?: number;
+  className?: string;
+}) => {
+  const words = children.split(' ');
+  
+  return (
+    <motion.div className={className}>
+      {words.map((word, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+            delay: delay + index * 0.2,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
+          className="inline-block mr-3 md:mr-6 last:mr-0"
+        >
+          {word}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
+};
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
-      {/* Background Image with Parallax */}
+    <section className="h-screen bg-black flex items-center justify-center relative overflow-hidden">
+      {/* Video Background */}
       <motion.div
-        variants={scaleInVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-        className="absolute inset-0 z-0"
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2, ease: 'easeOut' }}
+        className="absolute inset-0 w-full h-full"
       >
-        <Image
-          src="/images/hero-roses.png"
-          alt="Val des Roses luxury heritage roses"
-          fill
-          className="object-cover opacity-90 brightness-110"
-          priority
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLli5mdAo04PoIIlxfrOzOyCRFa0v/2Q=="
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/images/bg.mp4" type="video/mp4" />
+        </video>
       </motion.div>
 
-      {/* Subtle white overlay for elegance */}
-      <div className="absolute inset-0 bg-white/40 z-10" />
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-black/30 z-10" />
+      
+      {/* Additional gradient overlay for better text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10" />
 
-      {/* Content */}
-      <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
-        <AnimatedText
-          as="h1"
-          className="text-6xl md:text-8xl lg:text-9xl font-light tracking-[0.2em] mb-8 text-dark"
-          delay={0.5}
-          splitByWords={true}
-        >
-          VAL DES ROSES
-        </AnimatedText>
+      {/* Typography Section - Dramatic and bold */}
+      <div className="relative z-20 w-full max-w-6xl mx-auto text-center px-6 py-8">
         
-        <AnimatedSection
-          animation="fadeInUp"
-          delay={0.8}
+        {/* Luxury indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+          className="mb-8 md:mb-10"
         >
-          <div className="h-px bg-burgundy w-24 mx-auto mb-8" />
-        </AnimatedSection>
+          <div className="inline-flex items-center gap-4">
+            <div className="w-6 md:w-8 h-px bg-white/80" />
+            <span className="text-xs tracking-[0.4em] text-white/70 font-light uppercase">
+              Curated by Iryna
+            </span>
+            <div className="w-6 md:w-8 h-px bg-white/80" />
+          </div>
+        </motion.div>
 
-        <AnimatedSection
-          animation="fadeInUp"
-          delay={1}
+        {/* Main heading - Dramatically oversized */}
+        <div className="mb-8 md:mb-12">
+          <MinimalistTextReveal
+            delay={1}
+            className="text-[14vw] md:text-[11vw] lg:text-[9vw] xl:text-[120px] font-semibold tracking-[-0.02em] leading-[0.95] text-white drop-shadow-lg mb-1 md:mb-2"
+          >
+            VALLÉE
+          </MinimalistTextReveal>
+          <MinimalistTextReveal
+            delay={1.4}
+            className="text-[14vw] md:text-[11vw] lg:text-[9vw] xl:text-[120px] font-bold tracking-[-0.02em] leading-[0.75] text-white drop-shadow-lg"
+          >
+            DES ROSES
+          </MinimalistTextReveal>
+        </div>
+
+        {/* Elegant divider with burgundy accent */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: '80px' }}
+          transition={{ duration: 2, delay: 2.2 }}
+          className="h-px bg-white mx-auto mb-6 md:mb-10 shadow-lg"
+        />
+
+        {/* Sophisticated description */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.6 }}
+          className="mb-8 md:mb-12"
         >
-          <p className="text-xl md:text-2xl font-light tracking-wide mb-12 max-w-3xl mx-auto text-dark/80 leading-relaxed">
-            Heritage roses cultivated with passion and elegance
-            <br className="hidden md:block" />
-            in the heart of the valley since 2003
+          <p className="text-base md:text-xl lg:text-2xl xl:text-3xl font-light tracking-wide text-white/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
+            Exquisite Ecuadorian Preserved Roses
+            <br className="hidden sm:block" />
+            <span className="text-white font-normal">London atelier</span>
           </p>
-        </AnimatedSection>
+        </motion.div>
 
-        <AnimatedSection
-          animation="fadeInUp"
-          delay={1.3}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        {/* Minimal call-to-action */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 3.2 }}
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-20"
         >
-          <AnimatedLinkButton
+          <motion.a
             href="/shop"
-            className="bg-burgundy text-cream px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-dark transition-all duration-500 min-w-[200px] text-center"
+            className="group relative px-8 md:px-10 py-3 md:py-4 bg-white text-black font-medium tracking-[0.15em] text-sm uppercase overflow-hidden w-full sm:w-auto min-w-[220px] md:min-w-[260px] text-center shadow-lg"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
           >
-            EXPLORE COLLECTION
-          </AnimatedLinkButton>
-          <AnimatedLinkButton
+            <motion.div
+              className="absolute inset-0 bg-burgundy"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.4 }}
+            />
+            <span className="relative z-10 group-hover:text-burgundy transition-colors duration-400">View Collection</span>
+          </motion.a>
+          
+          <motion.a
             href="/about"
-            className="border-2 border-burgundy text-burgundy px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover:text-cream transition-all duration-500 min-w-[200px] text-center"
+            className="group relative px-8 md:px-10 py-3 md:py-4 border-2 border-white/40 text-white font-medium tracking-[0.15em] text-sm uppercase hover:border-white/70 hover:bg-white/10 transition-all duration-300 w-full sm:w-auto min-w-[220px] md:min-w-[260px] text-center backdrop-blur-sm"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
           >
-            OUR HERITAGE
-          </AnimatedLinkButton>
-        </AnimatedSection>
+            <span className="relative z-10">Our Story</span>
+          </motion.a>
+        </motion.div>
       </div>
 
-      {/* Animated Scroll Indicator */}
-      <AnimatedSection
-        animation="fadeIn"
-        delay={1.8}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20"
+      {/* Minimal scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 4 }}
+        className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div
-          variants={floatingVariants}
-          animate="animate"
-          className="w-6 h-10 border-2 border-burgundy/60 flex justify-center"
+          className="flex flex-col items-center gap-2 md:gap-3 text-white/60"
+          animate={{ y: [0, 4, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-            className="w-1 h-3 bg-burgundy/60 mt-2"
-          />
+          <div className="w-px h-8 md:h-12 bg-white/30" />
+          <span className="text-xs tracking-[0.3em] font-light uppercase">Scroll</span>
         </motion.div>
-      </AnimatedSection>
+      </motion.div>
     </section>
   );
 } 

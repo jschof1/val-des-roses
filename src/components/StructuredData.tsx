@@ -17,40 +17,46 @@ export default function StructuredData({ data }: StructuredDataProps) {
 export const organizationData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Val des Roses",
-  description: "Luxury preserved roses crafted with timeless elegance and heritage since 2003",
-  url: "https://valdesroses.com",
-  logo: "https://valdesroses.com/logo.png",
+  name: "Vallée des Roses",
+  description: "Luxury preserved roses with architecture-inspired design by Iryna. Premium London-based florist specializing in preserved roses that last 2-3 years.",
+  url: "https://valleedesroses.com",
+  logo: "https://valleedesroses.com/logo.png",
   sameAs: [
-    "https://www.instagram.com/valdesroses",
-    "https://www.facebook.com/valdesroses",
-    "https://twitter.com/valdesroses"
+    "https://www.instagram.com/valleedesroses",
+    "https://www.facebook.com/valleedesroses",
+    "https://twitter.com/valleedesroses"
   ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    email: "hello@valdesroses.com",
-    availableLanguage: ["English", "French"]
+    email: "hello@valleedesroses.com",
+    telephone: "+44 7436 229066",
+    availableLanguage: ["English"]
   },
   address: {
     "@type": "PostalAddress",
-    addressCountry: "FR",
-    addressLocality: "Paris"
+    streetAddress: "Office 4, 41 S Audley St",
+    addressLocality: "London",
+    postalCode: "W1K 2PS",
+    addressCountry: "GB"
   },
-  foundingDate: "2003",
-  numberOfEmployees: "10-50"
+  founder: {
+    "@type": "Person",
+    name: "Iryna"
+  },
+  numberOfEmployees: "1-10"
 };
 
 // Website structured data
 export const websiteData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Val des Roses",
-  url: "https://valdesroses.com",
-  description: "Luxury preserved roses collection",
+  name: "Vallée des Roses",
+  url: "https://valleedesroses.com",
+  description: "Luxury preserved roses with architecture-inspired design by Iryna. London delivery available.",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://valdesroses.com/shop?search={search_term_string}",
+    target: "https://valleedesroses.com/shop?search={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -59,24 +65,24 @@ export const websiteData = {
 export const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://valdesroses.com",
-  name: "Val des Roses",
-  image: "https://valdesroses.com/logo.png",
-  description: "Luxury preserved roses crafted with timeless elegance",
-  url: "https://valdesroses.com",
-  telephone: "+33-1-23-45-67-89",
-  email: "hello@valdesroses.com",
+  "@id": "https://valleedesroses.com",
+  name: "Vallée des Roses",
+  image: "https://valleedesroses.com/logo.png",
+  description: "Luxury preserved roses with architecture-inspired design by Iryna",
+  url: "https://valleedesroses.com",
+  telephone: "+44 7436 229066",
+  email: "hello@valleedesroses.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 Rue de la Paix",
-    addressLocality: "Paris",
-    postalCode: "75001",
-    addressCountry: "FR"
+    streetAddress: "Office 4, 41 S Audley St",
+    addressLocality: "London",
+    postalCode: "W1K 2PS",
+    addressCountry: "GB"
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "48.8566",
-    longitude: "2.3522"
+    latitude: "51.5074",
+    longitude: "-0.1278"
   },
   openingHoursSpecification: [
     {
@@ -93,7 +99,7 @@ export const localBusinessData = {
     }
   ],
   priceRange: "£££",
-  currenciesAccepted: "EUR",
+  currenciesAccepted: "GBP",
   paymentAccepted: "Credit Card, PayPal, Bank Transfer"
 };
 
@@ -101,26 +107,26 @@ export const localBusinessData = {
 export const createProductData = (product: Record<string, unknown>) => ({
   "@context": "https://schema.org",
   "@type": "Product",
-  "@id": `https://valdesroses.com/shop/${product.handle}`,
+  "@id": `https://valleedesroses.com/shop/${product.handle}`,
   name: product.title,
   description: product.description,
-  image: (product.images as Record<string, unknown>[])?.[0]?.src || "https://valdesroses.com/placeholder.jpg",
-  url: `https://valdesroses.com/shop/${product.handle}`,
+  image: (product.images as Record<string, unknown>[])?.[0]?.src || "https://valleedesroses.com/placeholder.jpg",
+  url: `https://valleedesroses.com/shop/${product.handle}`,
   brand: {
     "@type": "Brand",
-    name: "Val des Roses"
+    name: "Vallée des Roses"
   },
   category: product.productType || "Preserved Roses",
   offers: (product.variants as Record<string, unknown>[])?.map((variant: Record<string, unknown>) => ({
     "@type": "Offer",
-    "@id": `https://valdesroses.com/shop/${product.handle}#${variant.id}`,
+    "@id": `https://valleedesroses.com/shop/${product.handle}#${variant.id}`,
     price: (variant.price as Record<string, unknown>).amount,
     priceCurrency: (variant.price as Record<string, unknown>).currencyCode,
     availability: "https://schema.org/InStock",
-    url: `https://valdesroses.com/shop/${product.handle}`,
+    url: `https://valleedesroses.com/shop/${product.handle}`,
     seller: {
       "@type": "Organization",
-      name: "Val des Roses"
+      name: "Vallée des Roses"
     }
   })) || []
 }); 

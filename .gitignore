@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.ai/tasks/task14_vallee-des-roses-brand-content-update.md
+.ai/TASKS.md

@@ -144,16 +144,16 @@ export default function ShopPage() {
                 className="group"
               >
                 <Link 
-                  href={`/shop/£{product.handle}`} 
+                  href={`/shop/${product.handle}`} 
                   className="block focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
-                  aria-label={`View details for £{product.title}`}
+                  aria-label={`View details for ${product.title}`}
                 >
                   {/* Product Image */}
                   <div className="aspect-square relative overflow-hidden bg-cream/30 mb-6">
                     {product.images?.[0] ? (
                       <Image
                         src={product.images[0].src}
-                        alt={product.images[0].altText || `£{product.title} - luxury preserved rose product`}
+                        alt={product.images[0].altText || `${product.title} - luxury preserved rose product`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -163,7 +163,7 @@ export default function ShopPage() {
                       <div 
                         className="w-full h-full flex items-center justify-center bg-cream/40"
                         role="img"
-                        aria-label={`£{product.title} - no image available`}
+                        aria-label={`${product.title} - no image available`}
                       >
                         <div className="text-center text-dark/50">
                           <div className="text-4xl mb-2">🌹</div>
@@ -196,7 +196,7 @@ export default function ShopPage() {
                     {product.description && (
                       <p className="text-sm text-dark/60 leading-relaxed line-clamp-2">
                         {product.description.length > 120 
-                          ? `£{product.description.slice(0, 120)}...` 
+                          ? `${product.description.slice(0, 120)}...` 
                           : product.description
                         }
                       </p>

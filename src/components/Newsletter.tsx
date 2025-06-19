@@ -86,7 +86,7 @@ export default function Newsletter() {
             </div>
             
             <p className="text-xs text-secondary mt-4 leading-relaxed">
-              By subscribing, you agree to receive marketing emails from Val des Roses.
+                              By subscribing, you agree to receive marketing emails from Vallée des Roses.
               You can unsubscribe at any time.
             </p>
           </motion.form>

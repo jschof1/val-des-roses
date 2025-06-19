@@ -30,7 +30,7 @@ export default function BrandIntro() {
               className="text-5xl lg:text-6xl font-light tracking-wide text-white leading-tight"
               delay={0.2}
             >
-              Heritage Meets Modern Elegance
+              Architecture-Inspired Floral Design
             </AnimatedText>
 
             <motion.div
@@ -45,9 +45,9 @@ export default function BrandIntro() {
               delay={0.4}
             >
               <p className="text-xl text-white/80 leading-relaxed">
-                For over a decade, Val des Roses has been cultivating the world&apos;s most
-                exquisite preserved roses from Ecuador. Each bloom tells a story of dedication, craftsmanship,
-                and an unwavering commitment to beauty.
+                Founded by Iryna, Vallée des Roses creates extraordinary preserved rose arrangements
+                inspired by architectural principles. Each design celebrates the intersection of 
+                structural beauty and natural elegance, lasting 2-3 years.
               </p>
             </AnimatedSection>
 
@@ -56,8 +56,8 @@ export default function BrandIntro() {
               delay={0.6}
             >
               <p className="text-lg text-white/70 leading-relaxed">
-                From our valley gardens to your home, we bring you roses that embody
-                timeless elegance and natural perfection.
+                Based in London, we specialize in luxury preserved roses with same-day delivery.
+                Our architectural approach transforms premium roses into lasting works of art.
               </p>
             </AnimatedSection>
 
@@ -67,7 +67,7 @@ export default function BrandIntro() {
             >
               <Link href="/about">
                 <AnimatedSecondaryButton>
-                  DISCOVER OUR HERITAGE
+                  DISCOVER OUR STORY
                 </AnimatedSecondaryButton>
               </Link>
             </AnimatedSection>
@@ -90,8 +90,8 @@ export default function BrandIntro() {
                 >
                   🌹
                 </motion.div>
-                <p className="text-lg font-light">Brand Heritage</p>
-                <p className="text-sm opacity-60">Three Generations of Craft</p>
+                <p className="text-lg font-light">Preserved Beauty</p>
+                <p className="text-sm opacity-60">Architecture-Inspired Design</p>
               </div>
             </div>
           </AnimatedSection>
@@ -113,22 +113,22 @@ export default function BrandIntro() {
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-white mb-3">2003</h3>
-              <p className="text-white/70 tracking-wide">Founded</p>
+              <h3 className="text-3xl font-light text-white mb-3">2-3 Years</h3>
+              <p className="text-white/70 tracking-wide">Lasting Beauty</p>
             </motion.div>
             <motion.div 
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-white mb-3">20+</h3>
-              <p className="text-white/70 tracking-wide">Rose Varieties</p>
+              <h3 className="text-3xl font-light text-white mb-3">London</h3>
+              <p className="text-white/70 tracking-wide">Same-Day Delivery</p>
             </motion.div>
             <motion.div 
               variants={fadeInUpVariants}
               className="text-center"
             >
-              <h3 className="text-3xl font-light text-white mb-3">Same-Day</h3>
-              <p className="text-white/70 tracking-wide">Delivery Available</p>
+              <h3 className="text-3xl font-light text-white mb-3">Bespoke</h3>
+              <p className="text-white/70 tracking-wide">Design Approach</p>
             </motion.div>
           </motion.div>
         </AnimatedSection>

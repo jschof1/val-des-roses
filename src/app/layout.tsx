@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Val des Roses - Luxury Preserved Roses",
-    template: "%s | Val des Roses"
+    default: "Vallée des Roses - Luxury Preserved Roses | London",
+    template: "%s | Vallée des Roses"
   },
-  description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003. Premium preserved roses that last forever.",
+  description: "Discover exquisite preserved roses by Iryna, featuring architecture-inspired designs. Premium luxury preserved roses delivered same-day in London. Timeless beauty that lasts 2-3 years.",
   keywords: [
     "preserved roses",
     "luxury roses",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "anniversary gifts",
     "valentine roses"
   ],
-  authors: [{ name: "Val des Roses" }],
-  creator: "Val des Roses",
-  publisher: "Val des Roses",
+  authors: [{ name: "Vallée des Roses" }],
+  creator: "Vallée des Roses",
+  publisher: "Vallée des Roses",
   robots: {
     index: true,
     follow: true,
@@ -54,31 +54,31 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://valdesroses.com",
-    siteName: "Val des Roses",
-    title: "Val des Roses - Luxury Preserved Roses",
-    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003.",
+    url: "https://valleedesroses.com",
+    siteName: "Vallée des Roses",
+    title: "Vallée des Roses - Luxury Preserved Roses London",
+    description: "Discover exquisite preserved roses by Iryna, featuring architecture-inspired designs. Same-day delivery in London.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Val des Roses - Luxury Preserved Roses Collection",
+        alt: "Vallée des Roses - Luxury Preserved Roses Collection",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Val des Roses - Luxury Preserved Roses",
-    description: "Discover our collection of preserved roses, crafted with timeless elegance and heritage since 2003.",
+    title: "Vallée des Roses - Luxury Preserved Roses London",
+    description: "Discover exquisite preserved roses by Iryna, featuring architecture-inspired designs. Same-day delivery in London.",
     images: ["/og-image.jpg"],
-    creator: "@valdesroses",
+    creator: "@valleedesroses",
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
   },
   alternates: {
-    canonical: "https://valdesroses.com",
+    canonical: "https://valleedesroses.com",
   },
   category: "luxury goods",
   icons: {

@@ -17,10 +17,10 @@ export default function Footer() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-light tracking-wider mb-4">VAL DES ROSES</h3>
+            <h3 className="text-2xl font-light tracking-wider mb-4">VALLÉE DES ROSES</h3>
             <p className="text-background/70 leading-relaxed mb-6">
-              Cultivating beauty through heritage roses since 2003. 
-              Each bloom tells a story of passion and dedication.
+              Creating luxury preserved roses with architecture-inspired design by Iryna. 
+              Premium arrangements lasting 2-3 years with London same-day delivery.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-background/70 hover:text-background transition-colors duration-300">
@@ -44,11 +44,11 @@ export default function Footer() {
           >
             <h4 className="text-lg font-medium tracking-wide mb-4">SHOP</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">All Products</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">Heritage Roses</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">Garden Roses</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">Climbing Roses</a></li>
-              <li><a href="#" className="text-background/70 hover:text-background transition-colors duration-300">Care Products</a></li>
+              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">All Products</a></li>
+              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Preserved Roses</a></li>
+              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Luxury Arrangements</a></li>
+              <li><a href="/shop" className="text-background/70 hover:text-background transition-colors duration-300">Bespoke Designs</a></li>
+              <li><a href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</a></li>
             </ul>
           </motion.div>
 
@@ -61,11 +61,11 @@ export default function Footer() {
           >
             <h4 className="text-lg font-medium tracking-wide mb-4">ABOUT</h4>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Our Story</a></li>
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Our Gardens</a></li>
+              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">About Iryna</a></li>
+              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Our Process</a></li>
               <li><a href="/care-guide" className="text-background/70 hover:text-background transition-colors duration-300">Care Guide</a></li>
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Visit Us</a></li>
-              <li><a href="/about" className="text-background/70 hover:text-background transition-colors duration-300">Contact</a></li>
+              <li><a href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">London Delivery</a></li>
+              <li><a href="/contact" className="text-background/70 hover:text-background transition-colors duration-300">Contact</a></li>
             </ul>
           </motion.div>
 
@@ -99,22 +99,22 @@ export default function Footer() {
             <div>
               <h5 className="font-medium mb-2">VISIT</h5>
               <p className="text-background/70 text-sm">
-                123 Rose Valley Lane<br />
-                Provence, France 84000
+                Office 4, 41 S Audley St<br />
+                London W1K 2PS, United Kingdom
               </p>
             </div>
             <div>
               <h5 className="font-medium mb-2">CONTACT</h5>
               <p className="text-background/70 text-sm">
-                +33 4 90 123 456<br />
-                hello@valdesroses.com
+                +44 7436 229066<br />
+                hello@valleedesroses.com
               </p>
             </div>
             <div>
               <h5 className="font-medium mb-2">HOURS</h5>
               <p className="text-background/70 text-sm">
-                Mon-Sat: 9:00-18:00<br />
-                Sun: 10:00-17:00
+                Mon-Fri: 9:00-18:00<br />
+                Same-day delivery available
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function Footer() {
           className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <p className="text-background/70 text-sm">
-            © {currentYear} Val des Roses. All rights reserved.
+            © {currentYear} Vallée des Roses. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="/privacy-policy" className="text-background/70 hover:text-background transition-colors duration-300">

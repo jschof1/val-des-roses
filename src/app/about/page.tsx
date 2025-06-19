@@ -17,13 +17,13 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <h1 className="text-4xl md:text-6xl font-light tracking-wider mb-8 leading-tight text-dark">
-              Our Story
+              Meet Iryna
             </h1>
             <p className="text-lg md:text-xl text-dark/70 leading-relaxed mb-8">
-              For over seven decades, Val des Roses has been cultivating the world&apos;s most beautiful heritage roses in the heart of Provence, France.
+              The visionary founder behind Vallée des Roses, where architectural precision meets the timeless beauty of preserved roses.
             </p>
             <p className="text-base md:text-lg text-dark/60 leading-relaxed">
-              What began as a family passion in 2003 has grown into a legacy of preserving rare rose varieties and sharing their timeless beauty with the world.
+              Based in London, Iryna creates extraordinary floral arrangements that blend her background in architecture with her passion for botanical artistry.
             </p>
           </motion.div>
           
@@ -34,8 +34,8 @@ export default function AboutPage() {
             className="relative h-[600px]"
           >
             <Image
-              src="/images/about-hero.jpg"
-              alt="Val des Roses heritage garden in Provence"
+              src="/images/iryna-portrait.jpg"
+              alt="Iryna, founder of Vallée des Roses"
               fill
               className="object-cover"
               priority
@@ -43,7 +43,8 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-      {/* Heritage Section */}
+
+      {/* Iryna's Story Section */}
       <section className="py-32 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -54,77 +55,85 @@ export default function AboutPage() {
             className="text-center mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-dark">
-              A Heritage of Excellence
+              Architecture Meets Floristry
             </h2>
             <p className="text-lg text-dark/60 max-w-3xl mx-auto leading-relaxed">
-              Founded in 2003, our rose garden began as a quest to preserve the heritage varieties that were disappearing from French gardens.
+              Iryna&apos;s unique approach to floral design stems from her architectural background, where precision, structure, and aesthetic harmony are paramount.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
+              initial={{ x: -30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="text-center p-6 bg-cream/50"
             >
-              <div className="relative h-80 mb-8">
-                <Image
-                  src="/images/heritage-2003.jpg"
-                  alt="The original garden, 2003"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-2xl font-light tracking-wide mb-4 text-dark">2003 - The Beginning</h3>
-              <p className="text-dark/60 leading-relaxed">
-                The first heritage roses are planted on the family estate, determined to preserve varieties dating back centuries.
+              <h3 className="text-2xl md:text-3xl font-light tracking-wide mb-6 text-dark">
+                From Blueprints to Blooms
+              </h3>
+              <p className="text-dark/70 leading-relaxed mb-6">
+                With a foundation in architectural design, Iryna brings a unique perspective to floristry. Her approach treats each arrangement as a three-dimensional composition, where form, proportion, and spatial relationships create visual harmony.
               </p>
-            </motion.div>            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              <p className="text-dark/70 leading-relaxed">
+                This architectural lens transforms traditional floral design into something more structured, intentional, and enduring—much like the preserved roses she works with.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="text-center p-6 bg-white border border-cream"
+              className="relative h-96"
             >
-              <div className="relative h-80 mb-8">
-                <Image
-                  src="/images/heritage-1980s.jpg"
-                  alt="Garden expansion in the 2010s"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-2xl font-light tracking-wide mb-4 text-burgundy">2010s - Expansion</h3>
-              <p className="text-dark/60 leading-relaxed">
-                The garden expands to include over 200 varieties, becoming a sanctuary for rare and endangered rose species.
-              </p>
+              <Image
+                src="/images/design-process.jpg"
+                alt="Iryna's design process showing architectural sketches and rose arrangements"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ x: -30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true }}
+              className="relative h-96 order-2 lg:order-1"
+            >
+              <Image
+                src="/images/preserved-roses-studio.jpg"
+                alt="Vallée des Roses London studio with preserved roses"
+                fill
+                className="object-cover"
+              />
             </motion.div>
 
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="text-center p-6 bg-cream/50"
+              className="order-1 lg:order-2"
             >
-              <div className="relative h-80 mb-8">
-                <Image
-                  src="/images/heritage-today.jpg"
-                  alt="Modern Val des Roses garden"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-2xl font-light tracking-wide mb-4 text-dark">Today - Global Reach</h3>
-              <p className="text-dark/60 leading-relaxed">
-                Now led by the second generation, we share our passion worldwide while maintaining our commitment to heritage preservation.
+              <h3 className="text-2xl md:text-3xl font-light tracking-wide mb-6 text-dark">
+                The London Studio
+              </h3>
+              <p className="text-dark/70 leading-relaxed mb-6">
+                Located in the heart of London, Vallée des Roses operates from a carefully curated studio where each preserved rose arrangement is crafted by hand. The space reflects Iryna&apos;s aesthetic philosophy—clean lines, natural light, and thoughtful composition.
+              </p>
+              <p className="text-dark/70 leading-relaxed">
+                Here, premium preserved roses are transformed into architectural compositions that celebrate both the natural beauty of the flower and the structured elegance of design.
               </p>
             </motion.div>
           </div>
         </div>
-      </section>      {/* Values Section */}
+      </section>
+
+      {/* Preserved Roses Philosophy */}
       <section className="py-32 px-4 bg-dark">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -135,14 +144,14 @@ export default function AboutPage() {
             className="text-center mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-cream">
-              Our Values
+              Why Preserved Roses
             </h2>
             <p className="text-lg text-cream/70 max-w-3xl mx-auto leading-relaxed">
-              Every decision we make is guided by our core principles of heritage preservation, sustainable cultivation, and timeless beauty.
+              Iryna chose preserved roses for their unique ability to maintain perfect form and color for 2-3 years, allowing architectural compositions to retain their intended beauty over time.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -150,9 +159,9 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-cream/10 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Heritage</h3>
+              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Longevity</h3>
               <p className="text-cream/70 leading-relaxed">
-                Preserving rare varieties for future generations to discover and cherish.
+                Unlike fresh flowers, preserved roses maintain their beauty for 2-3 years, making them a lasting investment in luxury.
               </p>
             </motion.div>
 
@@ -165,36 +174,40 @@ export default function AboutPage() {
             >
               <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Sustainability</h3>
               <p className="text-cream/70 leading-relaxed">
-                Cultivating with respect for the environment and traditional methods.
-              </p>
-            </motion.div>            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="text-center p-6 bg-cream/10 backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Quality</h3>
-              <p className="text-cream/70 leading-relaxed">
-                Selecting only the finest specimens that meet our exacting standards.
+                No water, no maintenance, no waste. Preserved roses offer an eco-conscious alternative to constantly replacing fresh arrangements.
               </p>
             </motion.div>
 
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+              transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="text-center p-6 bg-white/5 backdrop-blur-sm"
+              className="text-center p-6 bg-cream/10 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Beauty</h3>
+              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Perfection</h3>
               <p className="text-cream/70 leading-relaxed">
-                Celebrating the timeless elegance that only heritage roses can provide.
+                Each rose is preserved at its peak bloom, ensuring consistent quality and the architectural precision Iryna demands.
               </p>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="mt-20 text-center"
+          >
+            <p className="text-xl text-cream/80 leading-relaxed max-w-4xl mx-auto">
+              &ldquo;I believe that beautiful design should be enduring. Preserved roses allow me to create arrangements that maintain their architectural integrity for years, not days.&rdquo;
+            </p>
+            <p className="text-lg text-cream/60 mt-4">— Iryna, Founder</p>
+          </motion.div>
         </div>
-      </section>      {/* Contact Section */}
+      </section>
+
+      {/* London Delivery & Contact */}
       <section className="py-32 px-4 bg-burgundy">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -204,31 +217,32 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-cream">
-              Order Your Roses Today
+              London Same-Day Delivery
             </h2>
             <p className="text-lg text-cream/80 leading-relaxed mb-12">
-              Bring the timeless beauty of heritage roses to your doorstep. We offer same-day delivery across London and surrounding areas for orders placed before 2 PM.
+              Experience Iryna&apos;s architectural floral designs with same-day delivery across London. Each arrangement is carefully crafted and personally curated for lasting beauty.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Our Location</h3>
+                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Studio Location</h3>
                 <p className="text-cream/80 leading-relaxed">
                   Office 4, 41 S Audley St<br />
                   London W1K 2PS<br />
                   United Kingdom<br />
                   <br />
-                  <strong className="text-cream">Same-Day Delivery Available</strong>
+                  <strong className="text-cream">Same-Day Delivery Available</strong><br />
+                  <span className="text-sm text-cream/70">Orders placed before 2 PM</span>
                 </p>
               </div>
               
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Contact Us</h3>
+                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Contact Iryna</h3>
                 <p className="text-cream/80 leading-relaxed">
                   <strong className="text-cream">Phone:</strong> +44 7436 229066<br />
-                  <strong className="text-cream">Email:</strong> hello@valdesroses.com<br />
+                  <strong className="text-cream">Email:</strong> hello@valleedesroses.com<br />
                   <br />
-                  <strong className="text-cream">Orders:</strong> orders@valdesroses.com
+                  <strong className="text-cream">Consultations:</strong> Available for bespoke arrangements and architectural installations
                 </p>
               </div>
             </div>
@@ -244,7 +258,7 @@ export default function AboutPage() {
                 href="/shop"
                 className="inline-block px-8 py-4 bg-cream text-dark font-medium tracking-wider hover:bg-cream/90 transition-colors duration-300 text-lg"
               >
-                Browse Our Collection
+                Explore Collections
               </Link>
             </motion.div>
           </motion.div>
