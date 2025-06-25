@@ -174,7 +174,7 @@ export default function ShopPage() {
                     
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-burgundy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-cream text-sm font-medium tracking-wide">
+                      <span className=" text-sm font-medium tracking-wide">
                         VIEW DETAILS
                       </span>
                     </div>

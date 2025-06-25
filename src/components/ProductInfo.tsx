@@ -110,13 +110,13 @@ export default function ProductInfo({ product, selectedVariant, onVariantChange 
   const getButtonStyles = () => {
     switch (addToCartStatus) {
       case 'success':
-        return 'bg-green-600 text-cream';
+        return 'bg-green-600 ';
       case 'error':
-        return 'bg-red-600 text-cream';
+        return 'bg-red-600 ';
       case 'adding':
-        return 'bg-burgundy/50 text-cream';
+        return 'bg-burgundy/50 ';
       default:
-        return 'bg-burgundy text-cream hover:bg-dark';
+        return 'bg-burgundy  hover:bg-dark';
     }
   };
 
@@ -191,7 +191,7 @@ export default function ProductInfo({ product, selectedVariant, onVariantChange 
                       onClick={() => variant && onVariantChange(variant)}
                       className={`px-3 sm:px-4 py-2 border transition-all duration-300 text-sm font-medium tracking-wide focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2 ${
                         isSelected
-                          ? 'border-burgundy bg-burgundy text-cream'
+                          ? 'border-burgundy bg-burgundy '
                           : 'border-dark/20 text-dark hover:border-burgundy hover:text-burgundy'
                       }`}
                       aria-label={`Select ${option.name}: ${value}${isSelected ? ' (currently selected)' : ''}`}

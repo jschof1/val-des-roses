@@ -145,7 +145,7 @@ export default function ContactPage() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-burgundy text-cream py-4 px-6 font-medium tracking-wide transition-colors duration-300 hover:bg-burgundy/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-burgundy  py-4 px-6 font-medium tracking-wide transition-colors duration-300 hover:bg-burgundy/90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
               </motion.button>
@@ -254,7 +254,7 @@ export default function ContactPage() {
           >
             <Link 
               href="/shop"
-              className="inline-block px-8 py-4 bg-burgundy text-cream font-medium tracking-wider hover:bg-burgundy/90 transition-colors duration-300 text-lg"
+              className="inline-block px-8 py-4 bg-burgundy  font-medium tracking-wider hover:bg-burgundy/90 transition-colors duration-300 text-lg"
             >
               Shop Our Roses
             </Link>

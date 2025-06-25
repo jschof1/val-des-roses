@@ -123,7 +123,7 @@ export default function CartDrawer() {
                   <p className="text-dark/60 mb-6">Add some beautiful roses to get started</p>
                   <button
                     onClick={closeCart}
-                    className="bg-burgundy text-cream px-6 py-3 text-sm font-medium tracking-wide hover:bg-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-burgundy"
+                    className="bg-burgundy  px-6 py-3 text-sm font-medium tracking-wide hover:bg-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-burgundy"
                   >
                     CONTINUE SHOPPING
                   </button>
@@ -223,7 +223,7 @@ export default function CartDrawer() {
                   <button
                     onClick={createCheckoutSession}
                   disabled={isLoading}
-                  className="w-full bg-burgundy text-cream py-4 text-sm font-medium tracking-wide hover:bg-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-burgundy"
+                  className="w-full bg-burgundy  py-4 text-sm font-medium tracking-wide hover:bg-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cream focus:ring-offset-2 focus:ring-offset-burgundy"
                     aria-describedby="checkout-description"
                   >
                   {isLoading ? 'Creating Checkout...' : 'PROCEED TO CHECKOUT'}

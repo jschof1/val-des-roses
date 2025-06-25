@@ -4,6 +4,7 @@ import ImageGallery from '@/components/ImageGallery';
 import LifestyleSection from '@/components/LifestyleSection';
 import FeaturedProducts from '@/components/FeaturedProducts';
 // import AboutTeaser from '@/components/AboutTeaser';
+import Testimonials from '@/components/Testimonials';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <LifestyleSection />
       {/* <AboutTeaser /> */}
       <ImageGallery />
+      <Testimonials />
       <Newsletter />
       <Footer />
     </>

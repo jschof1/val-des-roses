@@ -131,9 +131,9 @@ function ProductCard({ product, index }: ProductCardProps) {
   };
 
   const getQuickAddStyles = () => {
-    if (addToCartStatus === 'success') return 'bg-green-600 text-cream';
-    if (addToCartStatus === 'error') return 'bg-red-600 text-cream';
-    return 'bg-burgundy text-cream hover:bg-burgundy/80';
+    if (addToCartStatus === 'success') return 'bg-green-600 ';
+    if (addToCartStatus === 'error') return 'bg-red-600 ';
+    return 'bg-burgundy  hover:bg-burgundy/80';
   };
 
   return (
@@ -189,7 +189,7 @@ function ProductCard({ product, index }: ProductCardProps) {
               initial={{ y: 10, opacity: 0 }}
               whileHover={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="text-cream text-sm font-medium tracking-wide"
+              className=" text-sm font-medium tracking-wide"
             >
               VIEW DETAILS
             </motion.span>

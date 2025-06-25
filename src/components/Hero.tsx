@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useRef } from 'react';
 
 // Elegant text reveal component with dramatic timing
 const MinimalistTextReveal = ({ children, delay = 0, className = '' }: {
@@ -32,14 +33,26 @@ const MinimalistTextReveal = ({ children, delay = 0, className = '' }: {
 };
 
 export default function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  // Parallax transforms for different elements
+  const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
+
   return (
-    <section className="h-screen bg-black flex items-center justify-center relative overflow-hidden">
-      {/* Video Background */}
+    <section ref={ref} className="h-screen bg-black flex items-center justify-center relative overflow-hidden">
+      {/* Video Background with Parallax */}
       <motion.div
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 2, ease: 'easeOut' }}
-        className="absolute inset-0 w-full h-full"
+        style={{ y: videoY }}
+        className="absolute inset-0 w-full h-full scale-110"
       >
         <video
           autoPlay
@@ -52,14 +65,23 @@ export default function Hero() {
         </video>
       </motion.div>
 
-      {/* Subtle overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30 z-10" />
+      {/* Subtle overlay for text readability with parallax fade */}
+      <motion.div 
+        style={{ opacity: overlayOpacity }}
+        className="absolute inset-0 bg-black/30 z-10" 
+      />
       
       {/* Additional gradient overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10" />
+      <motion.div 
+        style={{ opacity: overlayOpacity }}
+        className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10" 
+      />
 
-      {/* Typography Section - Dramatic and bold */}
-      <div className="relative z-20 w-full max-w-6xl mx-auto text-center px-6 py-8">
+      {/* Typography Section - Dramatic and bold with parallax */}
+      <motion.div 
+        style={{ y: textY }}
+        className="relative z-20 w-full max-w-6xl mx-auto text-center px-6 py-8"
+      >
         
         {/* Luxury indicator */}
         <motion.div
@@ -148,7 +170,7 @@ export default function Hero() {
             <span className="relative z-10">Our Story</span>
           </motion.a>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Minimal scroll indicator */}
       <motion.div

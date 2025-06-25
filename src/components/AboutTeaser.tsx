@@ -9,8 +9,8 @@ export default function AboutTeaser() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-accent/5">
-      <div className="max-w-4xl mx-auto text-center">
+    <section ref={ref} className="relative py-24 px-4 bg-accent/5 textured-overlay">
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}

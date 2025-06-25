@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Base palette - Light Mode (Updated with new brand colors) */
+  /* Base palette - Light Mode (Updated to simple light colors) */
   --background-light: #FFFFFF;
-  --foreground-light: #101417; /* Updated to new dark color */
-  --primary-light: #612425; /* Updated to new burgundy color */
-  --secondary-light: #E8DFD1; /* Updated to new cream color */
-  --accent-light: #E8DFD1; /* Using cream as accent for consistency */
+  --foreground-light: #1F1F1F; /* Soft black instead of dark */
+  --primary-light: #6B7280; /* Light grey instead of burgundy */
+  --secondary-light: #F9FAFB; /* Very light grey/cream */
+  --accent-light: #F3F4F6; /* Light grey for accents */
 
-  /* Base palette - Dark Mode */
-  --background-dark: #101417; /* Using the new dark color */
-  --foreground-dark: #E8DFD1; /* Using cream for dark mode text */
-  --primary-dark: #E8DFD1; /* Light cream for primary elements in dark mode */
-  --secondary-dark: #612425; /* Burgundy for secondary in dark mode */
-  --accent-dark: #612425; /* Burgundy accent in dark mode */
+  /* Base palette - Dark Mode (keeping minimal for contrast) */
+  --background-dark: #F9FAFB; /* Light background */
+  --foreground-dark: #1F1F1F; /* Soft black text */
+  --primary-dark: #4B5563; /* Medium grey */
+  --secondary-dark: #F3F4F6; /* Light grey */
+  --accent-dark: #E5E7EB; /* Slightly darker light grey */
 
   /* Font variables are provided by next/font in layout.tsx */
   /* --font-geist-sans */
@@ -47,10 +47,10 @@
   --color-secondary: var(--secondary-light);
   --color-accent: var(--accent-light);
   
-  /* Additional brand colors for direct use */
-  --color-cream: #E8DFD1;
-  --color-burgundy: #612425;
-  --color-dark: #101417;
+  /* Additional brand colors for direct use - updated to simple palette */
+  --color-cream: #f4ebd0;
+  --color-light-grey: #6B7280;
+  --color-soft-black: #1F1F1F;
 
   /* Using the CSS variables defined by next/font in layout.tsx */
   --font-family-sans: var(--font-geist-sans);
@@ -86,7 +86,7 @@ p {
 
 /* Enhanced focus indicators with high contrast */
 *:focus-visible {
-  outline: 3px solid #612425 !important;
+  outline: 3px solid #6B7280 !important;
   outline-offset: 2px !important;
 }
 
@@ -97,7 +97,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid #612425 !important;
+  outline: 3px solid #6B7280 !important;
   outline-offset: 2px !important;
   box-shadow: 0 0 0 1px #FFFFFF !important;
 }
@@ -161,7 +161,7 @@ select:focus-visible,
 
 /* Better contrast for placeholder text */
 ::placeholder {
-  color: #6B7280 !important;
+  color: #9CA3AF !important;
   opacity: 1 !important;
 }
 
@@ -184,4 +184,18 @@ a {
   select {
     padding: 0.75rem !important;
   }
+}
+
+/* Texture Overlay - using lighter texture */
+.textured-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/45-degree-fabric-dark.png');
+  pointer-events: none;
+  opacity: 0.02;
+  z-index: 0;
 }

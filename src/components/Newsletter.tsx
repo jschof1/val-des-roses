@@ -26,13 +26,13 @@ export default function Newsletter() {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-primary">
-      <div className="max-w-4xl mx-auto text-center">
+    <section ref={ref} className="relative py-24 px-4 bg-primary textured-overlay">
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl lg:text-5xl font-light tracking-wide text-foreground mb-6"
+          className="text-4xl lg:text-5xl font-light tracking-wide text-white mb-6"
         >
           Stay In Bloom
         </motion.h2>

@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 export default function PrivacyPolicyPage() {
   return (
     <main>
-      <section className="py-32 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-32 px-4 bg-background textured-overlay">
+        <div className="relative z-10 max-w-4xl mx-auto">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

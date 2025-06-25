@@ -121,14 +121,14 @@ export default function TestAnimationsPage() {
           <div className="flex flex-wrap justify-center gap-6 mb-12">
             <AnimatedButton
               variant="scale"
-              className="px-8 py-3 bg-burgundy text-cream font-medium tracking-wide"
+              className="px-8 py-3 bg-burgundy  font-medium tracking-wide"
             >
               Scale Button
             </AnimatedButton>
 
             <AnimatedButton
               variant="lift"
-              className="px-8 py-3 bg-dark text-cream font-medium tracking-wide"
+              className="px-8 py-3 bg-dark  font-medium tracking-wide"
             >
               Lift Button
             </AnimatedButton>
@@ -226,7 +226,7 @@ export default function TestAnimationsPage() {
       </section>
 
       {/* Reduced Motion Notice */}
-      <section className="py-12 px-4 bg-dark text-cream text-center">
+      <section className="py-12 px-4 bg-dark  text-center">
         <p className="text-sm opacity-80">
           All animations respect the user&apos;s reduced motion preferences and will be disabled accordingly.
         </p>

@@ -92,7 +92,7 @@ export default function ImageGallery() {
                 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-burgundy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                  <div className="text-center text-cream">
+                  <div className="text-center ">
                     <h3 className="text-xl font-light mb-2">{image.title}</h3>
                     <p className="text-sm tracking-wide opacity-90">{image.subtitle}</p>
                   </div>
@@ -109,7 +109,7 @@ export default function ImageGallery() {
           transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
           className="text-center mt-20"
         >
-          <Link href="/shop" className="inline-block border-2 border-burgundy text-burgundy px-12 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover:text-cream transition-all duration-500">
+          <Link href="/shop" className="inline-block border-2 border-burgundy text-burgundy px-12 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover: transition-all duration-500">
             VIEW FULL COLLECTION
           </Link>
         </motion.div>

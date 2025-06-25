@@ -10,11 +10,11 @@ export default function PromotionalBar() {
 
   return (
     <div
-      className="bg-burgundy text-cream"
+      className="relative bg-gray-900 text-white textured-overlay"
       role="banner"
       aria-label="Promotional announcement"
     >
-      <div className="max-w-7xl mx-auto px-4 py-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex-1" />
           
@@ -33,7 +33,7 @@ export default function PromotionalBar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
-              className="text-cream/80 hover:text-cream transition-colors duration-300 p-1 focus:outline-none focus:ring-2 focus:ring-cream/50"
+              className="text-white/80 hover:text-white transition-colors duration-300 p-1 focus:outline-none focus:ring-2 focus:ring-white/50"
               aria-label="Close promotional banner"
             >
               <svg

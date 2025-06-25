@@ -72,8 +72,8 @@ export default function FeaturedProducts() {
   if (loading) {
     console.log('⏳ Showing loading state');
     return (
-      <section className="py-32 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-32 px-4 bg-white textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <h2 className="text-5xl lg:text-6xl font-light tracking-wide text-center text-dark mb-20">
             Featured Collection
           </h2>
@@ -94,8 +94,8 @@ export default function FeaturedProducts() {
   console.log('✅ Rendering main FeaturedProducts section with', products.length, 'products');
 
   return (
-    <section className="py-32 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-32 px-4 bg-white textured-overlay">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -156,7 +156,7 @@ export default function FeaturedProducts() {
                   
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-burgundy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-cream text-sm font-medium tracking-wide">
+                    <span className=" text-sm font-medium tracking-wide">
                       VIEW DETAILSSS
                     </span>
                   </div>
@@ -223,7 +223,7 @@ export default function FeaturedProducts() {
         >
           <Link 
             href="/shop" 
-            className="inline-block border-2 border-burgundy text-burgundy px-12 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover:text-cream transition-all duration-500"
+            className="inline-block border-2 border-burgundy text-burgundy px-12 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover: transition-all duration-500"
           >
             EXPLORE ALL ROSES
           </Link>

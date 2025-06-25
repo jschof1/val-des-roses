@@ -32,7 +32,7 @@ export default function Header() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
-                className="text-base md:text-xl font-light tracking-wide text-dark whitespace-nowrap"
+                className="text-base md:text-xl font-light tracking-wide text-gray-900 whitespace-nowrap"
               >
                   VALLÉE DES ROSES
               </motion.div>
@@ -48,14 +48,14 @@ export default function Header() {
             >
               <Link
                 href="/shop"
-                className="text-dark transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
+                className="text-gray-700 transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
               >
                 SHOP
               </Link>
               <motion.div
                 variants={underlineVariants}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-400 origin-left"
               />
             </motion.div>
             
@@ -66,14 +66,14 @@ export default function Header() {
             >
               <Link
                 href="/about"
-                className="text-dark transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
+                className="text-gray-700 transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
               >
                 ABOUT
               </Link>
               <motion.div
                 variants={underlineVariants}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-400 origin-left"
               />
             </motion.div>
             
@@ -84,14 +84,14 @@ export default function Header() {
             >
               <Link
                 href="/care-guide"
-                className="text-dark transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
+                className="text-gray-700 transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
               >
                 CARE GUIDE
               </Link>
               <motion.div
                 variants={underlineVariants}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-400 origin-left"
               />
             </motion.div>
             
@@ -102,26 +102,40 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className="text-dark transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
+                className="text-gray-700 transition-colors duration-300 text-sm font-medium tracking-wide focus:outline-none pb-1"
               >
                 CONTACT
               </Link>
               <motion.div
                 variants={underlineVariants}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-burgundy origin-left"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-400 origin-left"
               />
             </motion.div>
           </nav>
 
           {/* Cart & Mobile Menu Toggle */}
           <div className="flex flex-1 min-w-0 items-center justify-end space-x-4">
+            {/* Shop Now Button - Hidden on mobile to avoid clutter */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden sm:block"
+            >
+              <Link
+                href="/shop"
+                className="bg-gray-900 text-white px-4 py-2 text-sm font-medium tracking-wide hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              >
+                SHOP NOW
+              </Link>
+            </motion.div>
+
             {/* Cart Icon */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleCart}
-              className="relative p-2 text-dark hover:text-burgundy transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
+              className="relative p-2 text-gray-700 hover:text-gray-900 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               aria-label={`Shopping cart with ${totalQuantity} item${totalQuantity !== 1 ? 's' : ''}`}
               aria-expanded={isCartOpen ? 'true' : 'false'}
               aria-controls="cart-drawer"
@@ -135,7 +149,7 @@ export default function Header() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
-                  className="absolute -top-1 -right-1 bg-burgundy text-cream text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium"
+                  className="absolute -top-1 -right-1 bg-gray-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium"
                   aria-hidden="true"
                 >
                   {totalQuantity}
@@ -146,7 +160,7 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 text-dark hover:text-burgundy transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-burgundy focus:ring-offset-2"
+              className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
               aria-controls="mobile-menu"
@@ -185,32 +199,32 @@ export default function Header() {
           aria-label="Mobile navigation"
           aria-hidden={!isMobileMenuOpen}
         >
-          <div className="py-4 space-y-4 border-t border-cream/40 mt-4">
+          <div className="py-4 space-y-4 border-t border-gray-200 mt-4">
             <Link
                 href="/shop"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
-                className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
+                className="block text-gray-700 transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 SHOP
               </Link>
             <Link
                 href="/about"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
-                className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
+                className="block text-gray-700 transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 ABOUT
               </Link>
             <Link
                 href="/care-guide"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
-                className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
+                className="block text-gray-700 transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 CARE GUIDE
               </Link>
             <Link
                 href="/contact"
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
-                className="block text-dark transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
+                className="block text-gray-700 transition-colors duration-300 text-lg font-light tracking-wide focus:outline-none pb-1"
               >
                 CONTACT
               </Link>

@@ -58,7 +58,7 @@ export default function ProductFilters({
       <div className="lg:hidden mb-4">
         <button
           onClick={() => setShowMobileFilters(!showMobileFilters)}
-          className="flex items-center justify-between w-full p-4 bg-cream/20 text-dark hover:bg-cream/30 transition-colors duration-200"
+          className="flex items-center justify-between w-full p-4 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200"
         >
           <span className="font-medium">Filters & Sort</span>
           <motion.svg
@@ -79,19 +79,19 @@ export default function ProductFilters({
       <motion.div
         initial={false}
         animate={{ height: showMobileFilters ? 'auto' : 'auto' }}
-        className={`${showMobileFilters ? 'block' : 'hidden'} lg:block bg-white border-b border-cream/40 pb-6`}
+        className={`${showMobileFilters ? 'block' : 'hidden'} lg:block bg-white border-b border-gray-200 pb-6`}
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Collection Filter */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-            <label htmlFor="collection-filter" className="text-sm font-medium text-dark lg:whitespace-nowrap">
+            <label htmlFor="collection-filter" className="text-sm font-medium text-gray-700 lg:whitespace-nowrap">
               Collection:
             </label>
             <select
               id="collection-filter"
               value={filters.collection}
               onChange={(e) => handleFilterChange('collection', e.target.value)}
-              className="px-4 py-2 border border-cream/60 bg-white text-dark focus:outline-none focus:border-burgundy transition-colors duration-200"
+              className="px-4 py-2 border border-gray-300 bg-white text-gray-700 focus:outline-none focus:border-gray-500 transition-colors duration-200"
             >
               <option value="all">All Collections</option>
               {collections.map((collection) => (
@@ -104,7 +104,7 @@ export default function ProductFilters({
 
           {/* Price Range Filter */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-            <label htmlFor="price-filter" className="text-sm font-medium text-dark lg:whitespace-nowrap">
+            <label htmlFor="price-filter" className="text-sm font-medium text-gray-700 lg:whitespace-nowrap">
               Price Range:
             </label>
             <select
@@ -114,7 +114,7 @@ export default function ProductFilters({
                 const range = priceRanges.find(r => `${r.value[0]}-${r.value[1]}` === e.target.value);
                 if (range) handleFilterChange('priceRange', range.value);
               }}
-              className="px-4 py-2 border border-cream/60 bg-white text-dark focus:outline-none focus:border-burgundy transition-colors duration-200"
+              className="px-4 py-2 border border-gray-300 bg-white text-gray-700 focus:outline-none focus:border-gray-500 transition-colors duration-200"
             >
               {priceRanges.map((range) => (
                 <option key={`${range.value[0]}-${range.value[1]}`} value={`${range.value[0]}-${range.value[1]}`}>
@@ -126,14 +126,14 @@ export default function ProductFilters({
 
           {/* Sort */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-            <label htmlFor="sort-filter" className="text-sm font-medium text-dark lg:whitespace-nowrap">
+            <label htmlFor="sort-filter" className="text-sm font-medium text-gray-700 lg:whitespace-nowrap">
               Sort by:
             </label>
             <select
               id="sort-filter"
               value={filters.sortBy}
               onChange={(e) => handleFilterChange('sortBy', e.target.value)}
-              className="px-4 py-2 border border-cream/60 bg-white text-dark focus:outline-none focus:border-burgundy transition-colors duration-200"
+              className="px-4 py-2 border border-gray-300 bg-white text-gray-700 focus:outline-none focus:border-gray-500 transition-colors duration-200"
             >
               {sortOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -144,7 +144,7 @@ export default function ProductFilters({
           </div>
 
           {/* Product Count */}
-          <div className="text-sm text-dark/60 lg:ml-auto">
+          <div className="text-sm text-gray-500 lg:ml-auto">
             {productCount} {productCount === 1 ? 'product' : 'products'}
           </div>
         </div>
@@ -156,12 +156,12 @@ export default function ProductFilters({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-burgundy/10 text-burgundy text-sm"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-gray-100 text-gray-700 text-sm"
             >
               Collection: {collections.find(c => c.handle === filters.collection)?.title}
               <button
                 onClick={() => handleFilterChange('collection', 'all')}
-                className="hover:text-burgundy/80 transition-colors duration-200"
+                className="hover:text-gray-900 transition-colors duration-200"
               >
                 ×
               </button>
@@ -173,12 +173,12 @@ export default function ProductFilters({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-burgundy/10 text-burgundy text-sm"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-gray-100 text-gray-700 text-sm"
             >
               Sort: {sortOptions.find(s => s.value === filters.sortBy)?.label}
               <button
                 onClick={() => handleFilterChange('sortBy', 'featured')}
-                className="hover:text-burgundy/80 transition-colors duration-200"
+                className="hover:text-gray-900 transition-colors duration-200"
               >
                 ×
               </button>
@@ -190,12 +190,12 @@ export default function ProductFilters({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-burgundy/10 text-burgundy text-sm"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-gray-100 text-gray-700 text-sm"
             >
               Price: {priceRanges.find(r => r.value[0] === filters.priceRange[0] && r.value[1] === filters.priceRange[1])?.label}
               <button
                 onClick={() => handleFilterChange('priceRange', [0, 200])}
-                className="hover:text-burgundy/80 transition-colors duration-200"
+                className="hover:text-gray-900 transition-colors duration-200"
               >
                 ×
               </button>

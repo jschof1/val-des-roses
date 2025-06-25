@@ -135,7 +135,7 @@ export function AnimatedCTAButton({
   return (
     <AnimatedButton
       variant="lift"
-      className={`bg-burgundy text-cream px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-dark transition-colors duration-300 ${className}`}
+      className={`bg-gray-900 text-white px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-gray-700 transition-colors duration-300 ${className}`}
       {...props}
     >
       {children}
@@ -154,7 +154,7 @@ export function AnimatedSecondaryButton({
   return (
     <AnimatedButton
       variant="scale"
-      className={`border-2 border-burgundy text-burgundy px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover:text-cream transition-colors duration-300 ${className}`}
+      className={`border-2 border-gray-400 text-white px-10 py-4 text-sm font-medium tracking-[0.1em] hover:bg-gray-400 hover:text-white transition-colors duration-300 ${className}`}
       {...props}
     >
       {children}

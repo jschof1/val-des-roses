@@ -17,8 +17,8 @@ export default function BrandIntro() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section ref={ref} className="py-32 px-4 bg-burgundy">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="relative py-32 px-4 bg-gray-900 textured-overlay">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Text Content */}
           <AnimatedSection 
@@ -37,7 +37,7 @@ export default function BrandIntro() {
               initial={{ y: 30, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-              className="h-px bg-burgundy w-24"
+              className="h-px bg-gray-400 w-24"
             />
 
             <AnimatedSection
@@ -79,7 +79,7 @@ export default function BrandIntro() {
             delay={0.3}
             className="relative h-96 lg:h-[600px]"
           >
-            <div className="w-full h-full bg-cream/40 flex items-center justify-center">
+            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
               {/* Placeholder for brand image */}
               <div className="text-center text-white/60">
                 <motion.div 
@@ -101,7 +101,7 @@ export default function BrandIntro() {
         <AnimatedSection
           animation="stagger"
           delay={1}
-          className="mt-32 pt-20 border-t border-cream"
+                      className="mt-32 pt-20 border-t border-gray-600"
         >
           <motion.div
             variants={staggerContainerVariants}

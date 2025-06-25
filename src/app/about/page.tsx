@@ -9,8 +9,8 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-4 py-32 bg-cream">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="relative min-h-screen flex items-center px-4 py-32 bg-cream textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -45,8 +45,8 @@ export default function AboutPage() {
       </section>
 
       {/* Iryna's Story Section */}
-      <section className="py-32 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-32 px-4 bg-white textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -134,8 +134,8 @@ export default function AboutPage() {
       </section>
 
       {/* Preserved Roses Philosophy */}
-      <section className="py-32 px-4 bg-dark">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-32 px-4 bg-dark textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -143,10 +143,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-cream">
+            <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 ">
               Why Preserved Roses
             </h2>
-            <p className="text-lg text-cream/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg /70 max-w-3xl mx-auto leading-relaxed">
               Iryna chose preserved roses for their unique ability to maintain perfect form and color for 2-3 years, allowing architectural compositions to retain their intended beauty over time.
             </p>
           </motion.div>
@@ -159,8 +159,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-cream/10 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Longevity</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <h3 className="text-xl font-medium tracking-wide mb-4 ">Longevity</h3>
+              <p className="/70 leading-relaxed">
                 Unlike fresh flowers, preserved roses maintain their beauty for 2-3 years, making them a lasting investment in luxury.
               </p>
             </motion.div>
@@ -172,8 +172,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-white/5 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Sustainability</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <h3 className="text-xl font-medium tracking-wide mb-4 ">Sustainability</h3>
+              <p className="/70 leading-relaxed">
                 No water, no maintenance, no waste. Preserved roses offer an eco-conscious alternative to constantly replacing fresh arrangements.
               </p>
             </motion.div>
@@ -185,8 +185,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center p-6 bg-cream/10 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Perfection</h3>
-              <p className="text-cream/70 leading-relaxed">
+              <h3 className="text-xl font-medium tracking-wide mb-4 ">Perfection</h3>
+              <p className="/70 leading-relaxed">
                 Each rose is preserved at its peak bloom, ensuring consistent quality and the architectural precision Iryna demands.
               </p>
             </motion.div>
@@ -199,50 +199,50 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="mt-20 text-center"
           >
-            <p className="text-xl text-cream/80 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl /80 leading-relaxed max-w-4xl mx-auto">
               &ldquo;I believe that beautiful design should be enduring. Preserved roses allow me to create arrangements that maintain their architectural integrity for years, not days.&rdquo;
             </p>
-            <p className="text-lg text-cream/60 mt-4">— Iryna, Founder</p>
+            <p className="text-lg /60 mt-4">— Iryna, Founder</p>
           </motion.div>
         </div>
       </section>
 
       {/* London Delivery & Contact */}
-      <section className="py-32 px-4 bg-burgundy">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-32 px-4 bg-burgundy textured-overlay">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 text-cream">
+            <h2 className="text-3xl md:text-5xl font-light tracking-wider mb-8 ">
               London Same-Day Delivery
             </h2>
-            <p className="text-lg text-cream/80 leading-relaxed mb-12">
+            <p className="text-lg /80 leading-relaxed mb-12">
               Experience Iryna&apos;s architectural floral designs with same-day delivery across London. Each arrangement is carefully crafted and personally curated for lasting beauty.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Studio Location</h3>
-                <p className="text-cream/80 leading-relaxed">
+                <h3 className="text-xl font-medium tracking-wide mb-4 ">Studio Location</h3>
+                <p className="/80 leading-relaxed">
                   Office 4, 41 S Audley St<br />
                   London W1K 2PS<br />
                   United Kingdom<br />
                   <br />
-                  <strong className="text-cream">Same-Day Delivery Available</strong><br />
-                  <span className="text-sm text-cream/70">Orders placed before 2 PM</span>
+                  <strong className="">Same-Day Delivery Available</strong><br />
+                  <span className="text-sm /70">Orders placed before 2 PM</span>
                 </p>
               </div>
               
               <div className="p-8 bg-cream/10 backdrop-blur-sm">
-                <h3 className="text-xl font-medium tracking-wide mb-4 text-cream">Contact Iryna</h3>
-                <p className="text-cream/80 leading-relaxed">
-                  <strong className="text-cream">Phone:</strong> +44 7436 229066<br />
-                  <strong className="text-cream">Email:</strong> hello@valleedesroses.com<br />
+                <h3 className="text-xl font-medium tracking-wide mb-4 ">Contact Iryna</h3>
+                <p className="/80 leading-relaxed">
+                  <strong className="">Phone:</strong> +44 7436 229066<br />
+                  <strong className="">Email:</strong> hello@valleedesroses.com<br />
                   <br />
-                  <strong className="text-cream">Consultations:</strong> Available for bespoke arrangements and architectural installations
+                  <strong className="">Consultations:</strong> Available for bespoke arrangements and architectural installations
                 </p>
               </div>
             </div>

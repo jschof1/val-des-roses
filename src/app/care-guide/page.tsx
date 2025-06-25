@@ -8,8 +8,8 @@ export default function CareGuidePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-32 px-4 bg-cream">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-32 px-4 bg-cream textured-overlay">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -31,8 +31,8 @@ export default function CareGuidePage() {
       </section>
 
       {/* What Are Preserved Roses Section */}
-      <section className="py-20 px-4 bg-burgundy">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 bg-burgundy textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
@@ -40,29 +40,29 @@ export default function CareGuidePage() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-cream">
+              <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 ">
                 The Art of Preservation
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Natural Beauty, Lasting</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Natural Beauty, Lasting</h3>
+                  <p className="/80 leading-relaxed">
                     Our preserved roses are real roses that undergo a special preservation process, 
                     replacing their natural sap with eco-friendly glycerin to maintain their 
                     softness and natural appearance for years.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Sustainable Luxury</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Sustainable Luxury</h3>
+                  <p className="/80 leading-relaxed">
                     By choosing preserved roses, you&apos;re making an eco-conscious decision. 
                     No water, no fertilizers, no pesticides—just enduring beauty that reduces 
                     environmental impact while bringing joy for years.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Perfect Every Day</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Perfect Every Day</h3>
+                  <p className="/80 leading-relaxed">
                     Unlike fresh flowers that wilt in days, our preserved roses maintain their 
                     peak beauty for 3-5 years with virtually no maintenance required.
                   </p>
@@ -89,8 +89,8 @@ export default function CareGuidePage() {
       </section>
 
       {/* Simple Care Instructions */}
-      <section className="py-20 px-4 bg-cream">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 bg-cream textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -154,8 +154,8 @@ export default function CareGuidePage() {
       </section>
 
       {/* Placement & Environment */}
-      <section className="py-20 px-4 bg-dark">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 bg-dark textured-overlay">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ x: 50, opacity: 0 }}
@@ -179,27 +179,27 @@ export default function CareGuidePage() {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 text-cream">
+              <h2 className="text-3xl md:text-4xl font-light tracking-wider mb-8 ">
                 Perfect Placement
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Ideal Environment</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Ideal Environment</h3>
+                  <p className="/80 leading-relaxed">
                     Choose a location with room temperature (60-75°F) and normal humidity. 
                     Living rooms, bedrooms, and offices are perfect environments.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Light Considerations</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Light Considerations</h3>
+                  <p className="/80 leading-relaxed">
                     While our preserved roses can handle normal indoor lighting, 
                     avoid prolonged direct sunlight which may cause gradual color fading.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-3 text-cream">Display Options</h3>
-                  <p className="text-cream/80 leading-relaxed">
+                  <h3 className="text-xl font-medium mb-3 ">Display Options</h3>
+                  <p className="/80 leading-relaxed">
                     Perfect for tabletops, shelving, mantels, or anywhere you want 
                     to add natural beauty without the commitment of fresh flower care.
                   </p>
@@ -211,8 +211,8 @@ export default function CareGuidePage() {
       </section>
 
       {/* Sustainability & Benefits */}
-      <section className="py-20 px-4 bg-cream">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-20 px-4 bg-cream textured-overlay">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -228,9 +228,9 @@ export default function CareGuidePage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 bg-burgundy text-cream">
+              <div className="p-6 bg-burgundy ">
                 <h3 className="text-lg font-medium mb-3">Zero Waste</h3>
-                <p className="text-cream/80 text-sm leading-relaxed">
+                <p className="/80 text-sm leading-relaxed">
                   No wilted petals, no weekly replacements. One purchase brings 
                   years of beauty without waste.
                 </p>
@@ -244,9 +244,9 @@ export default function CareGuidePage() {
                 </p>
               </div>
               
-              <div className="p-6 bg-burgundy text-cream">
+              <div className="p-6 bg-burgundy ">
                 <h3 className="text-lg font-medium mb-3">Chemical-Free</h3>
-                <p className="text-cream/80 text-sm leading-relaxed">
+                <p className="/80 text-sm leading-relaxed">
                   No pesticides, fertilizers, or harmful chemicals. Pure, natural 
                   beauty preserved through eco-friendly processes.
                 </p>

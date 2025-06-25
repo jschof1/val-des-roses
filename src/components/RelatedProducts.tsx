@@ -54,10 +54,10 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-dark mb-4">
+        <h2 className="text-4xl lg:text-5xl font-light tracking-wide text-gray-900 mb-4">
           You May Also Like
         </h2>
-        <div className="h-px bg-burgundy w-24 mx-auto" />
+        <div className="h-px bg-gray-400 w-24 mx-auto" />
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -82,7 +82,7 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
               <Link href={`/shop/${product.handle}`} className="group block">
                 <div className="space-y-4">
                   {/* Product Image */}
-                  <div className="relative aspect-square overflow-hidden bg-cream/10">
+                  <div className="relative aspect-square overflow-hidden bg-gray-50">
                     <Image
                       src={primaryImage.src}
                       alt={primaryImage.altText || product.title}
@@ -93,11 +93,11 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
                     />
                     
                     {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gray-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
                     {/* Quick view indicator */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-medium text-dark tracking-wide">
+                      <div className="bg-white/90 backdrop-blur-sm px-4 py-2 text-sm font-medium text-gray-900 tracking-wide">
                         VIEW DETAILS
                       </div>
                     </div>
@@ -105,17 +105,17 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
 
                   {/* Product Info */}
                   <div className="space-y-2 text-center">
-                    <h3 className="text-lg font-light text-dark group-hover:text-burgundy transition-colors duration-300">
+                    <h3 className="text-lg font-light text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                       {product.title}
                     </h3>
                     
                     {product.productType && (
-                      <div className="text-xs text-dark/60 tracking-wider uppercase">
+                      <div className="text-xs text-gray-500 tracking-wider uppercase">
                         {product.productType}
                       </div>
                     )}
                     
-                    <div className="text-xl font-light text-burgundy">
+                    <div className="text-xl font-light text-gray-700">
                       {formatPrice(product.variants[0].price)}
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function RelatedProducts({ products }: RelatedProductsProps) {
       >
         <Link 
           href="/shop"
-          className="inline-block border-2 border-burgundy text-burgundy px-8 py-3 text-sm font-medium tracking-[0.1em] hover:bg-burgundy hover:text-cream transition-all duration-500"
+          className="inline-block border-2 border-gray-400 text-gray-700 px-8 py-3 text-sm font-medium tracking-[0.1em] hover:bg-gray-400 hover:text-white transition-all duration-500"
         >
           VIEW ALL PRODUCTS
         </Link>
