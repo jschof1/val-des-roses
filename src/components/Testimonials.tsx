@@ -124,7 +124,7 @@ export default function Testimonials() {
                 <StarRating rating={testimonial.rating} />
                 
                 <blockquote className="text-lg text-gray-700 leading-relaxed mb-8 italic">
-                  "{testimonial.review}"
+                  &ldquo;{testimonial.review}&rdquo;
                 </blockquote>
                 
                 <div className="border-t border-gray-200 pt-6">
