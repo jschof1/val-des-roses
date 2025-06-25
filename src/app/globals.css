@@ -48,8 +48,8 @@
   --color-accent: var(--accent-light);
   
   /* Additional brand colors for direct use - updated to simple palette */
-  --color-cream: #f4ebd0;
-  --color-light-grey: #6B7280;
+  --color-cream: #DEDEDE;
+  --color-light-grey: #DEDEDE;
   --color-soft-black: #1F1F1F;
 
   /* Using the CSS variables defined by next/font in layout.tsx */
